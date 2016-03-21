@@ -22,34 +22,51 @@ header.jumbotron {
     /* bottom: -20px; */
     /* left: 0; */
     /* width: 400px; */
-    height: 70vh;
+    height: 100vh;
     background-image: url("./myartwork_web.svg");
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
     background-color: rgba(255,255,255,1);
-/*    padding-bottom: 30px;*/
 }
 
-header .col-xs-12 {
-    padding-top: 15vh;
+header .row:first-child {
+    padding-top: 12vh;
 }
 
 header h2 {
-    padding-bottom: 0.5em;
+/*    padding-bottom: 0.5em;*/
     font-size: 5em;
     font-family: serif;
     font-weight: 600;
 }
 
 header #initial {
-    width: 50vh;
+    max-width: 30em;
 /*    background-color: rgba(240,250,255,.6);*/
     background-color: rgba(0,150,150,.65);
     border-radius: 10px;
     color: white;
     padding-top: 2em;
+    padding-bottom: .5em;
+    padding-left: .2em;
+    padding-right: .2em;
     margin-bottom: 5em;
+/*    position: absolute;*/
+}
+
+/*
+@media (max-width: 480px) {
+    .jumbotron {
+        margin-bottom: 10em;
+    }
+}
+*/
+
+@media (max-height: 560px) {
+    .jumbotron {
+        margin-bottom: 13em;
+    }
 }
 
 header h1 {
