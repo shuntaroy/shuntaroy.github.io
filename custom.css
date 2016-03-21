@@ -31,14 +31,22 @@ header.jumbotron {
 }
 
 header .row:first-child {
-    padding-top: 12vh;
+    padding-top: 20vh;
+    padding-bottom: 5em;
+}
+
+header h1 {
+/*    padding-bottom: 1em;*/
+/*    font-size: 5em;*/
+    font-family: serif;
+    font-weight: 700;
 }
 
 header h2 {
-/*    padding-bottom: 0.5em;*/
-    font-size: 5em;
+    font-weight: 700;
+/*    font-size: 1.5em;*/
+/*    color: cadetblue;*/
     font-family: serif;
-    font-weight: 600;
 }
 
 header #initial {
@@ -67,17 +75,6 @@ header #initial {
     .jumbotron {
         margin-bottom: 13em;
     }
-}
-
-header h1 {
-/*    padding-top: 20vh;*/
-}
-
-header h1 b {
-    font-weight: 700;
-    font-size: 1.5em;
-/*    color: cadetblue;*/
-    font-family: serif;
 }
 
 header p#social {
