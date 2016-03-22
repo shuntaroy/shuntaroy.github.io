@@ -6,7 +6,8 @@ html {
 body {
 /*    min-height: 200px;*/
     padding-top: 50px;
-    margin-bottom: 40px;
+/*    margin-bottom: 40px;*/
+    position: relative;
 }
 
 *[id]:before {
@@ -127,6 +128,10 @@ header i:hover {
 
 #main dt {
     color: gray;
+}
+
+#main > .row:last-child {
+    margin-bottom: 5em;
 }
 
 
