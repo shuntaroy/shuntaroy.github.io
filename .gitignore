@@ -1,0 +1,21 @@
+### https://raw.github.com/github/gitignore/4077c79bfb552a6e3ed92cd510873f4e796ab661/Global/Tags.gitignore
+
+# Ignore tags created by etags, ctags, gtags (GNU global) and cscope
+TAGS
+.TAGS
+!TAGS/
+tags
+.tags
+!tags/
+gtags.files
+GTAGS
+GRTAGS
+GPATH
+GSYMS
+cscope.files
+cscope.out
+cscope.in.out
+cscope.po.out
+
+
+
