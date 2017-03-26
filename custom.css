@@ -1,73 +1,75 @@
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /*    min-height: 200px;*/
-  padding-top: 50px;
-  /*    margin-bottom: 40px;*/
-  position: relative;
-  font-family: 'Source Sans Pro', sans-serif;
+    /*    min-height: 200px;*/
+    padding-top: 50px;
+    /*    margin-bottom: 40px;*/
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
+
 /*.lead */
+
 b {
-  font-weight: 400;
+    font-weight: 400;
 }
 
 *[id]:before {
-  display: block;
-  content: " ";
-  margin-top: -40px;
-  height: 40px;
-  visibility: hidden;
+    display: block;
+    content: " ";
+    margin-top: -40px;
+    height: 40px;
+    visibility: hidden;
 }
 
 header.jumbotron {
-  /* position: absolute; */
-  /* bottom: -20px; */
-  /* left: 0; */
-  /* width: 400px; */
-  height: 100vh;
-  background-image: url("./myartwork_web.svg");
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 1);
+    /* position: absolute; */
+    /* bottom: -20px; */
+    /* left: 0; */
+    /* width: 400px; */
+    height: 100vh;
+    background-image: url("./myartwork_web.svg");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 header .row:first-child {
-  padding-top: 20vh;
-  padding-bottom: 5em;
+    padding-top: 20vh;
+    padding-bottom: 5em;
 }
 
 header.jumbotron h1 {
-  /*padding-bottom: 1em;*/
-  font-family: 'Cardo', serif;
-  font-size: 7em;
-  font-weight: 700;
+    /*padding-bottom: 1em;*/
+    font-family: 'Cardo', serif;
+    font-size: 7em;
+    font-weight: 700;
 }
 
 header.jumbotron h2 {
-  font-weight: 700;
-  font-size: 5em;
-  /*color: cadetblue;*/
-  font-family: serif;
+    font-weight: 700;
+    font-size: 5em;
+    /*color: cadetblue;*/
+    font-family: serif;
 }
 
 header #initial {
-  max-width: 30em;
-  /*    background-color: rgba(240,250,255,.6);*/
-  background-color: rgba(0, 150, 150, .65);
-  border-radius: 10px;
-  color: white;
-  padding-top: 2em;
-  padding-bottom: .5em;
-  padding-left: .2em;
-  padding-right: .2em;
-  margin-bottom: 5em;
-  /*    position: absolute;*/
+    max-width: 30em;
+    /*    background-color: rgba(240,250,255,.6);*/
+    background-color: rgba(0, 150, 150, .65);
+    border-radius: 10px;
+    color: white;
+    padding-top: 2em;
+    padding-bottom: .5em;
+    padding-left: .2em;
+    padding-right: .2em;
+    margin-bottom: 5em;
+    /*    position: absolute;*/
 }
 
 
@@ -80,83 +82,81 @@ margin-bottom: 10em;
 */
 
 @media (max-height: 560px) {
-  .jumbotron {
-    margin-bottom: 13em;
-  }
+    .jumbotron {
+        margin-bottom: 13em;
+    }
 }
 
 header p#social {
-  letter-spacing: .2em;
+    letter-spacing: .2em;
 }
 
 header i {
-  color: white;
+    color: white;
 }
 
 header i:hover {
-  transition: .3s;
-  color: black;
+    transition: .3s;
+    color: black;
 }
 
 #main h2 {
-  font-weight: 900;
-  border-bottom: 3px solid lightseagreen;
-  /*     color: ; */
+    font-weight: 900;
+    border-bottom: 3px solid lightseagreen;
+    /*     color: ; */
 }
 
 #main h3 {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 #contact span {
-  font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 #work span {
-  padding-top: 0em;
-  font-size: 1.1em;
+    padding-top: 0em;
+    font-size: 1.1em;
 }
 
-
 @media (max-width: 991px) {
-  .text-center-sm {
-    text-align: center;
-  }
+    .text-center-sm {
+        text-align: center;
+    }
 }
 
 #about .col-md-5 {
-  padding-top: 3em
+    padding-top: 3em
 }
 
-
 #main>.row {
-  padding-top: 3em;
+    padding-top: 3em;
 }
 
 #main .row:first-child {
-  padding-top: 0em;
+    padding-top: 0em;
 }
 
 #main dl {
-  font-size: 1.25em;
+    font-size: 1.25em;
 }
 
 #main dt {
-  color: gray;
+    color: gray;
 }
 
 #main>.row:last-child {
-  margin-bottom: 5em;
+    margin-bottom: 5em;
 }
 
 .footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  height: 40px;
-  background-color: #f5f5f5;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 40px;
+    background-color: #f5f5f5;
 }
 
 .footer p {
-  padding-top: 10px;
+    padding-top: 10px;
 }
