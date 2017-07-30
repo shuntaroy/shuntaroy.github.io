@@ -89,11 +89,19 @@ header p#social {
     letter-spacing: .2em;
 }
 
+header p#at {
+    font-size: 1em;
+}
+
 header i {
     color: white;
 }
 
-header i:hover {
+header i.fa-at {
+    padding: 0 .3ex;
+}
+
+header i:not(.fa-at):hover {
     transition: .3s;
     color: black;
 }
