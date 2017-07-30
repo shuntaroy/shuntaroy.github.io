@@ -63,8 +63,8 @@ header #initial {
     background-color: rgba(0, 150, 150, .65);
     border-radius: 10px;
     color: white;
-    padding-top: 1em;
-    padding-bottom: .5em;
+    padding-top: .5em;
+    padding-bottom: .1em;
     padding-left: .5em;
     padding-right: .5em;
     /*    position: absolute;*/
@@ -79,11 +79,11 @@ header #initial {
     }
 }
 
-@media (max-height: 560px) {
+/*@media (max-height: 560px) {
     .jumbotron {
         margin-bottom: 13em;
     }
-}
+}*/
 
 header p#social {
     letter-spacing: .2em;

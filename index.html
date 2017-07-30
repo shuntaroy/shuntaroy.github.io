@@ -45,6 +45,30 @@
 
   <link href="https://fonts.googleapis.com/css?family=Cardo:700|Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
   <link href="custom.css" media="screen" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var setLanguage = function(lang) {
+        lang = lang.substr(0, 2);
+        var from = lang == 'en' ? 'ja' : 'en';
+        $('.lang-' + from).hide();
+        $('.lang-' + lang).fadeIn();
+        $('.lang')
+          .removeClass("active")
+          .each(function(i, el) {
+            if ($(el).data("lang") == lang) {
+              $(el).addClass("active");
+            }
+          });
+      };
+
+      $(".lang").click(function() {
+        setLanguage($(this).data("lang"));
+      });
+
+      setLanguage(navigator.language || navigator.userLanguage || "en");
+    });
+  </script>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -77,7 +101,13 @@
         <!-- right side -->
         <ul class="nav navbar-nav navbar-right">
           <!-- <li><a href="#">English</a></li> -->
-          <li><a href="#">日本語</a></li>
+          <!-- <li><a href="#">日本語</a></li> -->
+          <li class="lang-selector">
+            <a class="lang" data-lang="en">English</a>
+          </li>
+          <li class="lang-selector">
+            <a class="lang" data-lang="ja">日本語</a>
+          </li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -123,10 +153,11 @@
 
       <div class="col-md-7">
         <h3>Research Theme</h3>
-        <p class="lead">
+        <p class="lead lang-en">
           I major in Library and Information Science, and am interested in what kinds of opportunities makes people to read. My main research theme is development of a book recommendation system <b>Serendy</b> to simulate an online version of the situation
           where a person discovers books by chance through daily informal chats with friends. I focus on tweets that mention books. Besides, I also have an interest on supporting library by developing software.
         </p>
+        <p class="lead lang-ja">テスト</p>
         <div class="row">
           <div class="col-md-7" id="contact">
             <h3>Contact Details</h3>
@@ -277,7 +308,6 @@
   </footer>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.0.0/jquery.smooth-scroll.min.js"></script>
   <script src="custom.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
