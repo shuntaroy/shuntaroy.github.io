@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -43,32 +43,10 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Cardo:700|Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cardo:700" rel="stylesheet">
+  <!-- |Source+Sans+Pro:200,300,400,600,700,900 -->
   <link href="custom.css" media="screen" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      var setLanguage = function(lang) {
-        lang = lang.substr(0, 2);
-        var from = lang == 'en' ? 'ja' : 'en';
-        $('.lang-' + from).hide();
-        $('.lang-' + lang).fadeIn();
-        $('.lang')
-          .removeClass("active")
-          .each(function(i, el) {
-            if ($(el).data("lang") == lang) {
-              $(el).addClass("active");
-            }
-          });
-      };
 
-      $(".lang").click(function() {
-        setLanguage($(this).data("lang"));
-      });
-
-      setLanguage(navigator.language || navigator.userLanguage || "en");
-    });
-  </script>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -77,7 +55,7 @@
   <![endif]-->
 </head>
 
-<body data-spy="scroll" data-target=".navbar">
+<body data-spy="scroll" data-target="#navbar">
   <!-- Fixed navbar -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -88,24 +66,39 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#" id="brand">Shuntaro Yada</a>
+        <a class="navbar-brand lang-en" href="/" id="brand">Shuntaro Yada</a>
+        <a class="navbar-brand lang-ja" href="/" id="brand">矢田 竣太郎</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <!-- left side -->
         <ul class="nav navbar-nav">
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#skill">Skill</a></li>
+          <li>
+            <a class="lang-en" href="#about">About</a>
+            <a class="lang-ja" href="#about">プロフィール</a>
+          </li>
+          <li>
+            <a class="lang-en" href="#education">Education</a>
+            <a class="lang-ja" href="#education">学歴</a>
+          </li>
+          <li>
+            <a class="lang-en" href="#employment">Employment</a>
+            <a class="lang-ja" href="#employment">職歴</a>
+          </li>
+          <li>
+            <a class="lang-en" href="#skill">Skill</a>
+            <a class="lang-ja" href="#skill">技能</a>
+          </li>
         </ul>
         <!-- right side -->
         <ul class="nav navbar-nav navbar-right">
           <!-- <li><a href="#">English</a></li> -->
           <!-- <li><a href="#">日本語</a></li> -->
-          <li class="lang-selector">
+          <!-- <li class="nav-item lang-selector"> -->
+          <li>
             <a class="lang" data-lang="en">English</a>
           </li>
-          <li class="lang-selector">
+          <!-- <li class="nav-item lang-selector"> -->
+          <li>
             <a class="lang" data-lang="ja">日本語</a>
           </li>
         </ul>
@@ -114,19 +107,17 @@
     </div>
   </nav>
 
-
   <!-- Jumbotron -->
   <header class="jumbotron">
     <div class="container text-center">
-
       <div class="row">
         <h1>YADA, Shuntaro</h1>
         <h2>矢田 竣太郎</h2>
       </div>
-
       <div class="row">
         <div class="center-block" id="initial">
-          <p>I'm a Japanese <b>Ph.D. student</b> majoring in <b>Library and Information Science</b> at <b>the University of Tokyo</b>.</p>
+          <p class="lang-en">I am a Japanese <b>Ph.D. student</b> specialising in <b>Library and Information Science</b> at <b>the University of Tokyo</b>.</p>
+          <p class="lang-ja">東京大学大学院 図書館情報学研究室に所属する鳥取県米子市出身の博士課程学生です。</p>
           <p id="social">
             <a href="https://twitter.com/shunt_yada" target="_blank"><i class="fa fa-lg fa-twitter"></i></a>
             <a href="https://www.facebook.com/shuntaroy" target="_blank"><i class="fa fa-lg fa-facebook-official"></i></a>
@@ -135,42 +126,79 @@
             <a href="https://www.flickr.com/photos/shuntaroy" target="_blank"><i class="fa fa-lg fa-flickr" target="_blank"></i></a>
             <a href="http://www.slideshare.net/shuntaroy" target="_blank"><i class="fa fa-lg fa-slideshare"></i></a>
           </p>
-          <p id="at"><tt>shuntaroy<i class="fa fa-at" aria-hidden="false"></i>p.u-tokyo.ac.jp</tt></p>
+          <p id="at"><tt>shuntaroy<i class="fa fa-at" aria-hidden="true"></i>p.u-tokyo.ac.jp</tt></p>
         </div>
       </div>
-
     </div>
     <!-- /container -->
   </header>
 
   <div class="container" id="main">
-    <!-- TODO: fix typo and refine texts -->
     <div class="row" id='about'>
       <div class="col-md-3 text-center-sm">
-        <h2>About</h2>
+        <h2>
+          <data class="lang-en">About</data>
+          <data class="lang-ja">プロフィール</data>
+        </h2>
         <img src="myicon.jpg" alt="my icon image" class="img-thumbnail" width="200" height="300">
       </div>
 
       <div class="col-md-7">
-        <h3>Research Theme</h3>
+        <h3>
+          <data class="lang-en">Research Theme</data>
+          <data class="lang-ja">研究テーマ</data>
+        </h3>
         <p class="lead lang-en">
-          I major in Library and Information Science, and am interested in what kinds of opportunities makes people to read. My main research theme is development of a book recommendation system <b>Serendy</b> to simulate an online version of the situation
-          where a person discovers books by chance through daily informal chats with friends. I focus on tweets that mention books. Besides, I also have an interest on supporting library by developing software.
+          I major in Library and Information Science, and am interested in what kinds of opportunities make people to read.
+          My main research theme is development of a book recommendation system <b>Serendy</b> to simulate an online version of the situation where a person discovers books by chance through daily informal chats with friends.
+          Through this system, I aim to inspire <i>infrequent readers</i> who have desire to establish the reading habit but find it difficult to determine which book to read next.
+          For this purpose, I will let <b>Serendy</b> provide tweets that mention books to them.
         </p>
-        <p class="lead lang-ja">テスト</p>
+        <p class="lead lang-ja">
+          「人はどのようにして読むようになるのか」という問いに関心があり、将来的にはその契機（きっかけ）を明らかにしたいと考えています。
+          現在は博士課程の研究テーマとして、「何を読めばよいかわからない」と悩んでいる人たち（前読書家）を読書へと
+          <b>触発</b>する図書クチコミ推薦システム <b>Serendy</b> を研究・開発しています。
+          これは、物理的な空間で見受けられる「本との偶然の出会い」をオンライン上にも埋め込もうという取り組みにもなっていて、特に知人・友人との日常会話で不意に本が言及されるというシチュエーションに着目したものです。
+          具体的には、Twitter で繋がっている人々が話題にした本をそのときの言及とともにお届けするシステムです。
+        </p>
         <div class="row">
           <div class="col-md-7" id="contact">
-            <h3>Contact Details</h3>
-            <span>YADA, Shuntaro</span><br>
-            <span>Male, birth on 1991</span><br>
+            <h3>
+              <data class="lang-en">Contact Details</data>
+              <data class="lang-ja">詳細</data>
+            </h3>
+            <span>
+              <data class="lang-en">YADA, Shuntaro</data>
+              <data class="lang-ja">矢田 竣太郎（やだ しゅんたろう）</data>
+            </span><br>
+            <span>
+              <data class="lang-en">Male, born 1991</data>
+              <data class="lang-ja">男性/1991年生まれ</data>
+            </span><br>
             <span><a href="https://orcid.org/0000-0002-6209-1054" target="_blank">ORCID <img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_64x64.png" width="16" height="16" alt="ORCID logo"> 0000-0002-6209-1054</a></span><br>
-            <span><strong>Affiliation</strong></span><br>
-            <span><a href="https://lis.p.u-tokyo.ac.jp" target="_blank">Laboratory of Library and Information Science</a>,</span><br>
-            <span><a href="https://llls.p.u-tokyo.ac.jp/index_e.html" target="_blank">Division of Lifelong Learning Infrastructure Management,</a></span><br>
-            <span><a href="http://www.p.u-tokyo.ac.jp/english/" target="_blank">Graduate School of Education, the University of Tokyo</a></span><br>
+            <span><strong>
+              <data class="lang-en">Affiliation</data>
+              <data class="lang-ja">所属</data>
+            </strong></span><br>
+            <span>
+              <a class="lang-en" href="https://lis.p.u-tokyo.ac.jp" target="_blank">Laboratory of Library and Information Science,</a>
+              <a  class="lang-ja" href="http://www.p.u-tokyo.ac.jp/" target="_blank">東京大学大学院 教育学研究科</a>
+            </span><br>
+            <span>
+              <a class="lang-en" href="https://llls.p.u-tokyo.ac.jp/index_e.html" target="_blank">Division of Lifelong Learning Infrastructure Management,</a>
+              <a  class="lang-ja" href="https://llls.p.u-tokyo.ac.jp/" target="_blank">生涯学習基盤経営コース</a>
+            </span><br>
+            <span>
+              <a class="lang-en" href="http://www.p.u-tokyo.ac.jp/english/" target="_blank">Graduate School of Education, the University of Tokyo</a>
+              <a  class="lang-ja" href="https://lis.p.u-tokyo.ac.jp" target="_blank">図書館情報学研究室</a>
+            </span><br>
           </div>
           <div class="col-md-5 text-center">
-            <a class="btn btn btn-default" href="http://researchmap.jp/shuntaroy" role="button" aria-describedby="helpBlock" target="_blank"><i class="fa fa-lg fa-external-link"></i> Detailed CV with publication lists</a>
+            <a class="btn btn btn-default" href="http://researchmap.jp/shuntaroy" role="button" aria-describedby="helpBlock" target="_blank">
+              <i class="fa fa-lg fa-external-link"></i>
+              <data class="lang-en">Detailed CV with publication lists</data>
+              <data class="lang-ja">業績を含めた詳細な履歴書はこちら</data>
+            </a>
             <span id="helpBlock" class="help-block">Powered by Researchmap.jp</span>
           </div>
         </div>
@@ -179,48 +207,87 @@
 
     <div class="row" id="education">
       <div class="col-md-3 text-center-sm">
-        <h2>Education</h2>
+        <h2>
+          <data class="lang-en">Education</data>
+          <data class="lang-ja">学歴</data>
+        </h2>
       </div>
 
       <div class="col-md-7">
-        <h3>Graduate School of Education, the University of Tokyo</h3>
+        <h3>
+          <data class="lang-en">Graduate School of Education, the University of Tokyo</data>
+          <data class="lang-ja">東京大学大学院 教育学研究科</data>
+        </h3>
         <p class="lead">
-          Ph.D. Student in Library and Information Science |
-          <strong>Present</strong>
+          <data class="lang-en">Ph.D. Student in Library and Information Science | <strong>Present</strong> </data>
+          <data class="lang-ja">図書館情報学研究室 博士課程 | <strong>現在</strong></data>
         </p>
 
-        <h3>Graduate School of Education, the University of Tokyo</h3>
+        <h3>
+          <data class="lang-en">Graduate School of Education, the University of Tokyo</data>
+          <data class="lang-ja">東京大学大学院 教育学研究科</data>
+        </h3>
         <p class="lead">
-          Master of Education in Library and Information Science | <strong>March 2016</strong>
+          <data class="lang-en">Master of Education in Library and Information Science | <strong>March 2016</strong></data>
+          <data class="lang-ja">図書館情報学研究室 修士（教育学）| <strong>2016年3月</strong></data>
         </p>
 
-        <h3>The University of Tokyo</h3>
+        <h3>
+          <data class="lang-en">The University of Tokyo</data>
+          <data class="lang-ja">東京大学 教育学部</data>
+        </h3>
         <p class="lead">
-          Bachelor in Pedagogy | <strong>March 2014</strong>
+          <data class="lang-en">Bachelor in Pedagogy | <strong>March 2014</strong></data>
+          <data class="lang-ja">教育実践・政策学コース 学士（教育学）| <strong>2014年3月</strong></data>
         </p>
+
+        <!-- Japanese only -->
+        <data class="lang-ja">
+          <h3>東京大学 教養学部</h3>
+          <p class="lead">理科二類 | <strong>2010年4月〜2012年3月</strong></p>
+        </data>
       </div>
     </div>
 
-    <div class="row" id="work">
+    <div class="row" id="employment">
       <div class="col-md-3 text-center-sm">
-        <h2>Work</h2>
+        <h2>
+          <data class="lang-en">Employment</data>
+          <data class="lang-ja">職歴</data>
+        </h2>
       </div>
 
       <div class="col-md-7">
 
-        <h3>KDDI Research</h3>
+        <h3>
+          <data class="lang-en">KDDI Research</data>
+          <data class="lang-ja">KDDI 総合研究所</data>
+        </h3>
         <p class="lead">
-          Student Intern | <strong>October 2016-June 2017</strong>
+          <data class="lang-en">Student Intern | <strong>October 2016–June 2017</strong></data>
+          <data class="lang-ja">学生インターン | <strong>2016年10月〜2017年6月</strong></data>
         </p>
 
-        <h3>UTokyo <a href="http://www.todai-mono-lab-japan.com" target="_blank">Mono-Lab-Japan</a></h3>
+        <h3>
+          <data class="lang-en">UTokyo</data>
+          <data class="lang-ja">東大</data>
+          <a href="http://www.todai-mono-lab-japan.com" target="_blank">Mono-Lab-Japan</a>
+        </h3>
         <p class="lead">
-          Senior Student Instractor | <strong>2014–2017</strong>
+          <data class="lang-en">Senior Student Instructor | <strong>2014–2017</strong></data>
+          <data class="lang-ja">学生講師・コアスタッフ | <strong>2014年〜2017年</strong></data>
         </p>
         <span class="help-block">
-          I have been planning and teaching how to build own gold-roubeberg machine to pupils in Takayama city and Gifu city.
-          In this program, we work with municipal administrations, local comittees of education, retired senior engineers, and volunteer high school students, as well as college student staffs of the project.
-          Also I teach <a href="https://www.arduino.cc" target="_blank">Arduino</a> as a device which is combined into a gold-roubeberg machine children craft.
+          <data class="lang-en">
+            I planned and taught how to build own Rube Goldberg machines to pupils in Takayama city and Gifu city.
+            Also I taught <a href="https://www.arduino.cc" target="_blank">Arduino</a> to combine it into Rube Goldberg machines the children crafted.
+            Through this program, I had many precious experience of working with municipal administrations, local committees of education, retired senior engineers, and volunteer high school students, as well as college student staffs of the project.
+          </data>
+          <data class="lang-ja">
+            高山市と岐阜市の小学生を対象に、自由な発想でピタゴラ装置を制作してもらうワークショップにおいて、企画・運営と講座の講師を勤めました（活動報告ブログ）。
+            とくに子供達のピタゴラ装置に一工夫を加えるための <a href="https://www.arduino.cc" target="_blank">Arduino</a> の実習も担当していました。
+            このプログラムを通じて、市行政・地方教育委員会・高専/工業高校生徒ボランティア・退職技術者・大学生スタッフといった様々な人々と連携する貴重な経験を積みました。
+          </data>
         </span>
 
       </div>
@@ -228,73 +295,148 @@
 
     <div class="row" id="skill">
       <div class="col-md-3 text-center-sm">
-        <h2>Skill</h2>
+        <h2>
+          <data class="lang-en">Skill</data>
+          <data class="lang-ja">技能</data>
+        </h2>
       </div>
 
       <div class="col-md-7">
 
-        <h3>Natural Languages</h3>
+        <h3>
+          <data class="lang-en">Natural Languages</data>
+          <data class="lang-ja">自然言語</data>
+        </h3>
         <dl class="dl-horizontal">
-          <dt>Japanese</dt>
-          <dd>Native speaker.</dd>
+          <dt>
+            <data class="lang-en">Japanese</data>
+            <data class="lang-ja">日本語</data>
+          </dt>
+          <dd>
+            <data class="lang-en">Native speaker</data>
+            <data class="lang-ja">母語話者</data>
+          </dd>
 
-          <dt>English</dt>
-          <dd>Intermidiate level in reading and writing, basic level in listening and speaking.</dd>
+          <dt>
+            <data class="lang-en">English</data>
+            <data class="lang-ja">英語</data>
+          </dt>
+          <dd>
+            <data class="lang-en">Intermediate level in reading and writing, basic level in listening and speaking.</data>
+            <data class="lang-ja">リーディングとライティングが中級程度、リスニングとスピーキングが基礎レベル</data>
+          </dd>
 
-          <dt>Deutsch</dt>
-          <dd>Beginner as a third language.</dd>
+          <dt>
+            <data class="lang-en">German</data>
+            <data class="lang-ja">ドイツ語</data>
+          </dt>
+          <dd>
+            <data class="lang-en">Beginner as my second foreign language</data>
+            <data class="lang-ja">第2外国語として初級程度</data>
+          </dd>
         </dl>
 
-        <h3>Programming Languages</h3>
+        <h3>
+          <data class="lang-en">Programming Languages</data>
+          <data class="lang-ja">プログラミング言語</data>
+        </h3>
         <dl class="dl-horizontal">
           <dt>Python 3</dt>
           <dd>
-            Using more than four years and my main programming language:
+            <data class="lang-en">
+              My main programming language, constantly using from 2014 with the following experience:
+            </data>
+            <data class="lang-ja">
+              メインの言語として 2014 年から継続的に使用:
+            </data>
             <ul>
-              <li>Natural Language Processing (Japanese and English),</li>
-              <li>Machine Learning (<a href="http://scikit-learn.org/stable/" target="_blank">sklearn</a> and <a href="https://github.com/fchollet/keras" target="_blank">keras</a>),</li>
-              <li>Data Analysis (<a href="http://pandas.pydata.org" target="_blank">pandas</a>, <a href="http://www.numpy.org/" target="_blank">numpy</a>, and <a href="https://www.scipy.org/" target="_blank">scipy</a>).</li>
+              <li>
+                <data class="lang-en">Natural Language Processing (Japanese and English)</data>
+                <data class="lang-ja">自然言語処理（日本語・英語）</data>
+              </li>
+              <li>
+                <data class="lang-en">Machine Learning </data>
+                <data class="lang-ja">機械学習</data> (
+                <a href="http://scikit-learn.org/stable/" target="_blank">sklearn</a> and <a href="https://github.com/fchollet/keras" target="_blank">keras</a>)
+              </li>
+              <li>
+                <data class="lang-en">Data Analysis</data>
+                <data class="lang-ja">データ分析</data> (<a href="http://pandas.pydata.org" target="_blank">pandas</a>, <a href="http://www.numpy.org/" target="_blank">numpy</a>, and <a href="https://www.scipy.org/" target="_blank">scipy</a>)
+              </li>
             </ul>
           </dd>
 
           <dt>Ruby</dt>
           <dd>
-            Intermittently using six years for casual programming such as building simple web applications (of Rails or Sinatra), and preprocessing textual data.
+            <data class="lang-en">Intermittently using from 2010 for casual programming such as building simple web applications (of Rails or Sinatra), and preprocessing textual data.</data>
+            <data class="lang-ja">2010年から断続的に使用: Rails や Sinatra を使った Web アプリケーション構築やテキストの前処理</data>
           </dd>
 
           <dt>JavaScript</dt>
-          <dd>Beginner on D3.js, and jQuery.</dd>
+          <dd>
+            <data class="lang-en">Beginner on D3.js, and jQuery.</data>
+            <data class="lang-ja">D3.js や jQuery を中心に基礎的な使用</data>
+          </dd>
 
           <dt>LaTeX</dt>
-          <dd>For typesetting academic articles (creating <a href="https://github.com/utlis/llls_depp-thesis_template" target="_blank">a thesis template</a> for my affiliation).</dd>
+          <dd>
+            <data class="lang-en">For typesetting academic articles (creating <a href="https://github.com/utlis/llls_depp-thesis_template" target="_blank">a thesis template</a> for my affiliation).</data>
+            <data class="lang-ja">論文・レジュメ作成に使用（研究科所属コースの<a href="https://github.com/utlis/llls_depp-thesis_template" target="_blank">学位論文テンプレート</a>を作成中）</data>
+          </dd>
         </dl>
 
-        <h3>Operating Systems</h3>
+        <h3>
+          <data class="lang-en">Operating Systems</data>
+          <data class="lang-ja">オペレーティングシステム</data>
+        </h3>
         <dl class="dl-horizontal">
           <dt>macOS</dt>
-          <dd>Daily use for research and development.</dd>
+          <dd>
+            <data class="lang-en">Daily use for research and development.</data>
+            <data class="lang-ja">研究や開発のために日常的に利用</data>
+          </dd>
 
           <dt>Linux</dt>
           <dd>
-            Server operation such as running scripts and Rails/Wordpress deployment. My favorite distribution is Ubuntu.</dd>
+            <data class="lang-en">Server operation such as running scripts and Rails/WordPress deployment (My familiar distribution is Ubuntu)</data>
+            <data class="lang-ja">スクリプトの実行や Web アプリケーション（Rails や Wordpress）のデプロイを経験（Ubuntu CUI を主に使用）</data>
+          </dd>
 
           <dt>Windows</dt>
-          <dd>Basic handling, if others force me to use it</dd>
+          <dd>
+            <data class="lang-en">Basic handling, if others force me to use it.</data>
+            <data class="lang-ja">基本的な操作はできるが、可能な限り触りたくない</data>
+          </dd>
         </dl>
 
-        <h3>Production Tools</h3>
+        <h3>
+          <data class="lang-en">Production Tools</data>
+          <data class="lang-ja">ツール</data>
+        </h3>
         <dl class="dl-horizontal">
           <dt>Atom Editor</dt>
-          <dd>Main text editor in GUI (with vim-mode-plus).</dd>
+          <dd>
+            <data class="lang-en">Main text editor in GUI (with vim-mode-plus).</data>
+            <data class="lang-ja">GUI における主たるテキストエディタ（vim-mode-plus で Vim 化している）</data>
+          </dd>
 
-          <dt>Vim (neovim)</dt>
-          <dd>Main text editor in CUI.</dd>
+          <dt>Vim (NeoVim)</dt>
+          <dd>
+            <data class="lang-en">Main text editor in CUI.</data>
+            <data class="lang-ja">CUI における主たるテキストエディタ</data>
+          </dd>
 
           <dt>Premiere Pro</dt>
-          <dd>Basic level of post production such as making <a href="https://www.youtube.com/watch?v=CormMX8JLI4" target="_blank">a short PV</a></dd>
+          <dd>
+            <data class="lang-en">Basic level of post production such as making <a href="https://www.youtube.com/watch?v=CormMX8JLI4" target="_blank">a short PV</a> and a short film</data>
+            <data class="lang-ja"><a href="https://www.youtube.com/watch?v=CormMX8JLI4" target="_blank">PV</a>や短編映画制作ができる程度の基本的なポストプロダクション</data>
+          </dd>
 
           <dt>Illustrator</dt>
-          <dd>Designing <a href="http://researchmap.jp/?action=cv_download_main&upload_id=80192" target="_blank">academic posters</a> and bussiness cards for myself and other projects (recently I switched into Affinity Designer)</dd>
+          <dd>
+            <data class="lang-en">Designing <a href="http://researchmap.jp/?action=cv_download_main&upload_id=80192" target="_blank">academic posters</a> and business cards for myself and other projects (currently I switched into <a href="https://affinity.serif.com/designer/">Affinity Designer</a>).</data>
+            <data class="lang-ja"><a href="http://researchmap.jp/?action=cv_download_main&upload_id=80192" target="_blank">学会ポスター</a>や名刺の制作に使用（現在は<a href="https://affinity.serif.com/designer/">Affinity Designer</a>に移行）</data>
+          </dd>
         </dl>
 
       </div>
@@ -303,16 +445,20 @@
 
   <footer class="footer">
     <div class="container text-center">
-      <p class="text-muted"><i class="fa fa-copyright"></i> 2017 Shuntaro Yada</p>
+      <p class="text-muted"><i class="fa fa-copyright"></i>2017
+        <data class="lang-en">Shuntaro Yada</data>
+        <data class="lang-ja">矢田 竣太郎</data>
+      </p>
     </div>
   </footer>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.0.0/jquery.smooth-scroll.min.js"></script>
-  <script src="custom.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- <script src="custom.js"></script> -->
   <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.0.0/jquery.smooth-scroll.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script>
+  <script type="text/javascript">
     (function(i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
       i[r] = i[r] || function() {
@@ -327,6 +473,38 @@
 
     ga('create', 'UA-77153787-1', 'auto');
     ga('send', 'pageview');
+
+    // smoothScroll
+    $('#navbar a:not(.lang)').smoothScroll();
+    $("#brand").on('click', function() {
+      $("body,html").animate({
+        scrollTop: 0
+      }, 'slow');
+      return false;
+    });
+    $('.navbar-collapse a').click(function() {
+      $(".navbar-collapse").collapse('hide');
+    });
+
+    // multi-lang
+    $(document).ready(function() {
+      var setLanguage = function(lang) {
+        lang = lang.substr(0, 2);
+        var from = lang == 'en' ? 'ja' : 'en';
+        $('.lang-' + from).hide();
+        $('.lang-' + lang).fadeIn();
+        $('.lang').parent().removeClass("active")
+        $('.lang').each(function(i, el) {
+          if ($(el).data("lang") == lang) {
+            $(el).parent().addClass("active");
+          }
+        });
+      };
+      $(".lang").click(function() {
+        setLanguage($(this).data("lang"));
+      });
+      setLanguage(navigator.language || navigator.userLanguage || "en");
+    });
   </script>
 </body>
 
