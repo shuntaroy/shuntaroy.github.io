@@ -133,9 +133,9 @@ header i:not(.fa-at):hover {
     padding-top: 3em;
 }
 
-#main>.row {
+/*#main>.row {
     padding-top: 3em;
-}
+}*/
 
 #main .row:first-child {
     padding-top: 0em;
