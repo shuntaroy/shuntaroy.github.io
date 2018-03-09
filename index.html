@@ -49,53 +49,55 @@
 
 <body data-spy="scroll" data-target="#navbar">
   <!-- Fixed navbar -->
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand lang-en" href="/" id="brand">Shuntaro Yada</a>
-        <a class="navbar-brand lang-ja" href="/" id="brand">矢田 竣太郎</a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <!-- left side -->
-        <ul class="nav navbar-nav">
-          <li>
-            <a class="lang-en" href="#about">About</a>
-            <a class="lang-ja" href="#about">プロフィール</a>
-          </li>
-          <li>
-            <a class="lang-en" href="#education">Education</a>
-            <a class="lang-ja" href="#education">学歴</a>
-          </li>
-          <li>
-            <a class="lang-en" href="#employment">Employment</a>
-            <a class="lang-ja" href="#employment">職歴</a>
-          </li>
-          <li>
-            <a class="lang-en" href="#skill">Skill</a>
-            <a class="lang-ja" href="#skill">技能</a>
-          </li>
-        </ul>
-        <!-- right side -->
-        <ul class="nav navbar-nav navbar-right">
-          <!-- <li><a href="#">English</a></li> -->
-          <!-- <li><a href="#">日本語</a></li> -->
-          <!-- <li class="nav-item lang-selector"> -->
-          <li>
-            <a class="lang" data-lang="en">English</a>
-          </li>
-          <!-- <li class="nav-item lang-selector"> -->
-          <li>
-            <a class="lang" data-lang="ja">日本語</a>
-          </li>
-        </ul>
-      </div>
-      <!--/.nav-collapse -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/" id="brand">
+      <data class="lang-en">Shuntaro Yada</data>
+      <data class="lang-ja">矢田 竣太郎</data>
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse">
+      <!-- left side -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">
+            <data class="lang-en" >About</data>
+            <data class="lang-ja" >プロフィール</data>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#education">
+            <data class="lang-en">Education</data>
+            <data class="lang-ja">学歴</data>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#employment">
+            <data class="lang-en">Employment</data>
+            <data class="lang-ja">職歴</data>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skill">
+            <data class="lang-en">Skill</data>
+            <data class="lang-ja">技能</data>
+          </a>
+        </li>
+      </ul>
+      <!-- right side -->
+      <ul class="navbar-nav ml-auto">
+        <!-- <li><a href="#">English</a></li> -->
+        <!-- <li><a href="#">日本語</a></li> -->
+        <!-- <li class="nav-item lang-selector"> -->
+        <li class="nav-item">
+          <a class="nav-link lang" data-lang="en">English</a>
+        </li>
+        <!-- <li class="nav-item lang-selector"> -->
+        <li class="nav-link nav-item">
+          <a class="lang" data-lang="ja">日本語</a>
+        </li>
+      </ul>
     </div>
   </nav>
 
