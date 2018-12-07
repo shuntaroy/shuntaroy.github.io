@@ -25,7 +25,7 @@ i.fab {
 
 *[id]:before {
     display: block;
-    content: " ";
+    content: "";
     margin-top: -40px;
     height: 40px;
     visibility: hidden;
@@ -44,34 +44,30 @@ header.jumbotron {
     background-color: rgba(255, 255, 255, 1);
 }
 
-header .row:first-child {
-    padding-top: 15vh;
-    padding-bottom: 5vh;
-}
-
 header.jumbotron h1 {
     /*padding-bottom: 1em;*/
+    padding-top: 15vh;
+    padding-bottom: 5vh;
     font-family: 'Cardo', serif;
     font-size: 10vh;
-    font-weight: 700;
+    font-weight: bold;
     text-shadow: 0 0 15px #AAA;
 }
 
-header.jumbotron h2 {
-    font-weight: 700;
-    font-size: 8vh;
-    /*color: cadetblue;*/
-    font-family: serif;
-    text-shadow: 0 0 15px #AAA;
+header.jumbotron h1 small {
+  font-family: 'ヒラギノ明朝 ProN W6', 'Noto Serif Japanese', 游明朝, 'Yu Mincho', YuMincho, serif;
+  font-weight: bold;
 }
 
 header #initial {
-    max-width: 31em;
-    width: 95vw;
+    max-width: 26em;
+    /* width: 95vw; */
     background-color: rgba(0, 150, 150, .65);
     border-radius: 10px;
     color: white;
-    padding: .5em 2em .1em 2em;
+    /* padding: .5em 2em .1em 2em; */
+    padding-top: .5em;
+    /* padding-bottom: .1em */
 }
 
 @media (max-width: 480px) {
@@ -88,7 +84,8 @@ header #initial {
 }
 
 header p#at {
-    font-size: 1em;
+    /* font-size: 1em; */
+    padding-bottom: .5em;
 }
 
 header i {
@@ -133,9 +130,9 @@ header i:not(.fa-at):hover {
     padding-top: 3em;
 }
 
-/*#main>.row {
-    padding-top: 3em;
-}*/
+#main>.row {
+    padding-bottom: 3em;
+}
 
 #main .row:first-child {
     padding-top: 0em;
