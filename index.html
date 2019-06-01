@@ -85,7 +85,7 @@
             <a class="lang-ja" href="#employment">職歴</a>
           </li>
           <li>
-            <a class="lang-en" href="#skill">Skill</a>
+            <a class="lang-en" href="#skill">Skills</a>
             <a class="lang-ja" href="#skill">技能</a>
           </li>
         </ul>
@@ -271,6 +271,18 @@
 
       <div class="col-md-7">
         <h3>
+          <data class="lang-en">CSIRO (Australia)</data>
+          <data class="lang-ja">オーストラリア連邦科学産業研究機構</data>
+          <small>
+            Data61 Language and Social Computing Team
+            <a href="https://research.csiro.au/lasc/" target="_blank"><i class="fas fa-link"></i></a>
+          </small>
+        </h3>
+        <p class="lead">
+          <data class="lang-en">Visiting Scientist | <strong>May 2019–August 2019</strong></data>
+          <data class="lang-ja">客員研究員 | <strong>2019年5月〜2018年8月</strong></data>
+        </p>
+        <h3>
           <data class="lang-en">UTokyo LISLab</data>
           <data class="lang-ja">東京大学 図書館情報学研究室</data>
         </h3>
@@ -331,7 +343,7 @@
     <div class="row" id="skill">
       <div class="col-md-3 text-center-sm">
         <h2>
-          <data class="lang-en">Skill</data>
+          <data class="lang-en">Skills</data>
           <data class="lang-ja">技能</data>
         </h2>
       </div>
@@ -339,7 +351,8 @@
       <div class="col-md-7">
 
         <h3>
-          <data class="lang-en">Qualifications</data>
+          <data class="lang-en">Qualification</data>
+          <!-- if multiple, pluralise the header title-->
           <data class="lang-ja">資格</data>
         </h3>
         <p class="lead">
@@ -430,44 +443,38 @@
 
           <dt>Ruby</dt>
           <dd>
-            <data class="lang-en">Intermittently using from 2010 for casual programming such as building simple web applications (with <a href="https://rubyonrails.org/" target="_blank">Ruby on Rails</a> or <a href="http://sinatrarb.com/" target="_blank">Sinatra</a>), and pre-processing textual data.</data>
+            <data class="lang-en">Intermittently using from 2010 for building simple web applications (with <a href="https://rubyonrails.org/" target="_blank">Ruby on Rails</a> or <a href="http://sinatrarb.com/" target="_blank">Sinatra</a>), and pre-processing textual data</data>
             <data class="lang-ja">2010年から断続的に使用: Rails や Sinatra を使った Web アプリケーション構築やテキストの前処理</data>
           </dd>
 
           <dt>JavaScript</dt>
           <dd>
-            <data class="lang-en">D3.js and jQuery (e.g., for designing a dashboard UI of user statistics visualisation).</data>
+            <data class="lang-en">D3.js and jQuery (e.g., for designing a dashboard UI of user statistics visualisation)</data>
             <data class="lang-ja">D3.js および jQuery （例：統計データダッシュボードのUI制作）</data>
           </dd>
 
-          <dt>LaTeX</dt>
+          <dt>R</dt>
           <dd>
-            <data class="lang-en">For typesetting academic articles (creating <a href="https://github.com/utlis/llls_depp-thesis_template" target="_blank">a thesis template</a> for my affiliation).</data>
-            <data class="lang-ja">論文・レジュメ作成に使用（研究科所属コースの<a href="https://github.com/utlis/llls_depp-thesis_template" target="_blank">学位論文テンプレート</a>を作成中）</data>
+            <data class="lang-en">Statistical hypothesis testing (e.g., t-test and ANOVA) and statistical modelling (including generalised linear mixed models)</data>
+            <data class="lang-ja">統計的仮説検定（t検定やANOVA）および統計モデリング（一般化線形混合モデルを含む）</data>
           </dd>
         </dl>
 
         <h3>
-          <data class="lang-en">Operating Systems</data>
-          <data class="lang-ja">オペレーティングシステム</data>
+          <data class="lang-en">Markup Languages</data>
+          <data class="lang-ja">マークアップ言語</data>
         </h3>
         <dl class="dl-horizontal">
-          <dt>macOS</dt>
+          <dt>HTML (and CSS)</dt>
           <dd>
-            <data class="lang-en">Daily use for research and development.</data>
-            <data class="lang-ja">研究や開発のために日常的に利用</data>
+            <data class="lang-en">Website building like this page</data>
+            <data class="lang-ja">このページをはじめとするwebサイト制作</data>
           </dd>
 
-          <dt>Linux</dt>
+          <dt>LaTeX</dt>
           <dd>
-            <data class="lang-en">For server operations such as running scripts and hosting web applications (well experienced in Debian-based distributions)</data>
-            <data class="lang-ja">スクリプトの実行や Web アプリケーション（Rails や Wordpress）のデプロイを経験（Debian系ディストリビューションに習熟）</data>
-          </dd>
-
-          <dt>Windows</dt>
-          <dd>
-            <data class="lang-en">Basic handling</data>
-            <data class="lang-ja">基本的な操作</data>
+            <data class="lang-en">Typesetting academic articles (creating <a href="https://github.com/utlis/llls_depp-thesis_template" target="_blank">a thesis template</a> for my affiliation)</data>
+            <data class="lang-ja">論文・レジュメ作成に使用（研究科所属コースの<a href="https://github.com/utlis/llls_depp-thesis_template" target="_blank">学位論文テンプレート</a>を作成中）</data>
           </dd>
         </dl>
 
@@ -478,7 +485,14 @@
         <dl class="dl-horizontal">
           <dt>Dev tools</dt>
           <dd>
-            Atom Editor, Vim, Git, Docker, & Heroku
+            Vim, tmux, Git, Docker (and <a href="https://github.com/sylabs/singularity" target="_blank">Singularity</a>), & Vagrant
+          </dd>
+
+          <dt>Server Ops</dt>
+          <dd>
+            web servers (Apache & Nginx),
+            basic user setup, & computing resource management (for HPC)
+            on Debian (Ubuntu) Linux
           </dd>
 
           <dt>Databases</dt>
@@ -491,16 +505,37 @@
             Groonga & Sphinx
           </dd>
 
-          <dt>Premiere Pro</dt>
+          <dt>Web apps</dt>
           <dd>
-            <data class="lang-en">For post production such as making <a href="https://www.youtube.com/watch?v=CormMX8JLI4" target="_blank">a short PV</a> and a short film</data>
-            <data class="lang-ja"><a href="https://www.youtube.com/watch?v=CormMX8JLI4" target="_blank">PV</a>や短編映画制作といったポストプロダクションを経験</data>
+            Wordpress & Dokuwiki
           </dd>
 
-          <dt>Illustrator</dt>
+          <dt>Cloud & Hosting</dt>
           <dd>
-            <data class="lang-en">Designing <a href="http://researchmap.jp/?action=cv_download_main&upload_id=80192" target="_blank">academic posters</a> and business cards for myself and other projects (currently I switched into <a href="https://affinity.serif.com/designer/">Affinity Designer</a>).</data>
-            <data class="lang-ja"><a href="http://researchmap.jp/?action=cv_download_main&upload_id=80192" target="_blank">学会ポスター</a>や名刺の制作に使用（現在は<a href="https://affinity.serif.com/designer/">Affinity Designer</a>に移行）</data>
+            GCP & Heroku
+          </dd>
+
+          <dt>Video editing</dt>
+          <dd>
+            <ul>
+              <li>
+                Premiere Pro:
+                <data class="lang-en">experienced more than two years with <a href="https://www.youtube.com/watch?v=CormMX8JLI4" target="_blank">a short PV</a> and short independent films</data>
+                <data class="lang-ja"><a href="https://www.youtube.com/watch?v=CormMX8JLI4" target="_blank">PV</a>や短編映画制作といったポストプロダクションの2年以上の経験</data>
+              </li>
+              <li>
+                iMovie:
+                <data class="lang-en">for home movies</data>
+                <data class="lang-ja">カジュアルな動画制作</data>
+              </li>
+            </ul>
+          </dd>
+
+          <dt>Vector graphics</dt>
+          <dd>
+            Illustrator & Affinity Designer:
+            <data class="lang-en">Designing <a href="http://researchmap.jp/?action=cv_download_main&upload_id=80192" target="_blank">academic posters</a> and business cards for myself and others</data>
+            <data class="lang-ja"><a href="http://researchmap.jp/?action=cv_download_main&upload_id=80192" target="_blank">学会ポスター</a>や名刺の制作</data>
           </dd>
         </dl>
 
