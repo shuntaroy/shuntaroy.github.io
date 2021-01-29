@@ -164,3 +164,7 @@ header i:not(.fa-at):hover {
 .footer p {
     padding-top: 10px;
 }
+
+#orcid-id-logo {
+  vertical-align: text-top;
+}
