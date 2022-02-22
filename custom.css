@@ -1,84 +1,84 @@
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 body {
-    /*    min-height: 200px;*/
-    padding-top: 50px;
-    /*    margin-bottom: 40px;*/
-    position: relative;
-    /*font-family: 'Source Sans Pro', sans-serif;*/
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  /*    min-height: 200px;*/
+  padding-top: 50px;
+  /*    margin-bottom: 40px;*/
+  position: relative;
+  /*font-family: 'Source Sans Pro', sans-serif;*/
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI",
+    "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
 }
-
 
 /*.lead */
 
 b {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 i.fab {
-    padding: 0 .3ex;
+  padding: 0 0.3ex;
 }
 
 *[id]:before {
-    display: block;
-    content: " ";
-    margin-top: -40px;
-    height: 40px;
-    visibility: hidden;
+  display: block;
+  content: " ";
+  margin-top: -40px;
+  height: 40px;
+  visibility: hidden;
 }
 
 header.jumbotron {
-    /* position: absolute; */
-    /* bottom: -20px; */
-    /* left: 0; */
-    /* width: 400px; */
-    height: 95vh;
-    background-image: url("./myartwork_web.svg");
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 1);
+  /* position: absolute; */
+  /* bottom: -20px; */
+  /* left: 0; */
+  /* width: 400px; */
+  height: 95vh;
+  background-image: url("./myartwork_web.svg");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 header .row:first-child {
-    padding-top: 15vh;
-    padding-bottom: 5vh;
+  padding-top: 15vh;
+  padding-bottom: 5vh;
 }
 
 header.jumbotron h1 {
-    /*padding-bottom: 1em;*/
-    font-family: 'Cardo', serif;
-    font-size: 10vh;
-    font-weight: 700;
-    text-shadow: 0 0 15px #AAA;
+  /*padding-bottom: 1em;*/
+  font-family: "Cardo", serif;
+  font-size: 10vh;
+  font-weight: 700;
+  text-shadow: 0 0 15px #aaa;
 }
 
 header.jumbotron h2 {
-    font-weight: 700;
-    font-size: 8vh;
-    /*color: cadetblue;*/
-    font-family: serif;
-    text-shadow: 0 0 15px #AAA;
+  font-weight: 700;
+  font-size: 8vh;
+  /*color: cadetblue;*/
+  font-family: serif;
+  text-shadow: 0 0 15px #aaa;
 }
 
 header #initial {
-    max-width: 31em;
-    width: 95vw;
-    background-color: rgba(0, 150, 150, .65);
-    border-radius: 10px;
-    color: white;
-    padding: .5em 2em .1em 2em;
+  max-width: 31em;
+  width: 95vw;
+  background-color: rgba(0, 150, 150, 0.65);
+  border-radius: 10px;
+  color: white;
+  padding: 0.5em 2em 0.1em 2em;
 }
 
 @media (max-width: 480px) {
-    header #inital {
-        margin-left: 5vw;
-        margin-right: 5vw;
-    }
+  header #inital {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
 }
 /* avoid overrap of #inital and #main in iPhone SE */
 @media (max-width: 320px) {
@@ -88,16 +88,24 @@ header #initial {
 }
 
 header p#at {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 header i {
-    color: white;
+  color: white;
 }
 
 header i:not(.fa-at):hover {
-    transition: .3s;
-    color: black;
+  transition: 0.3s;
+  color: black;
+}
+
+/* a work-around until Font Awesome supports Notion icon */
+#notion_icon {
+  margin: 0 0.3ex;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
 }
 
 /*#main {
@@ -105,32 +113,32 @@ header i:not(.fa-at):hover {
 }*/
 
 #main h2 {
-    font-weight: 900;
-    border-bottom: 3px solid lightseagreen;
-    /*     color: ; */
+  font-weight: 900;
+  border-bottom: 3px solid lightseagreen;
+  /*     color: ; */
 }
 
 #main h3 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 #contact span {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 #work span {
-    padding-top: 0em;
-    font-size: 1.1em;
+  padding-top: 0em;
+  font-size: 1.1em;
 }
 
 @media (max-width: 991px) {
-    .text-center-sm {
-        text-align: center;
-    }
+  .text-center-sm {
+    text-align: center;
+  }
 }
 
 #about .col-md-5 {
-    padding-top: 3em;
+  padding-top: 3em;
 }
 
 /*#main>.row {
@@ -138,31 +146,31 @@ header i:not(.fa-at):hover {
 }*/
 
 #main .row:first-child {
-    padding-top: 0em;
+  padding-top: 0em;
 }
 
 #main dl {
-    font-size: 1.25em;
+  font-size: 1.25em;
 }
 
 #main dt {
-    color: lightseagreen;
+  color: lightseagreen;
 }
 
-#main>.row:last-child {
-    margin-bottom: 5em;
+#main > .row:last-child {
+  margin-bottom: 5em;
 }
 
 .footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    height: 40px;
-    background-color: #f5f5f5;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 40px;
+  background-color: #f5f5f5;
 }
 
 .footer p {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 #orcid-id-logo {

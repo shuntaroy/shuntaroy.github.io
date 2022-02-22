@@ -125,6 +125,8 @@
             <a href="https://github.com/shuntaroy" target="_blank"><i class="fab fa-lg fa-github"></i></a>
             <a href="http://speakerdeck.com/shuntaroy" target="_blank"><i class="fab fa-lg fa-speaker-deck"></i></a>
             <a href="https://www.linkedin.com/in/shuntaroy" target="_blank"><i class="fab fa-lg fa-linkedin"></i></a>
+            <!-- a work-around until Font Awesome supports Notion icon -->
+            <a href="https:/shuntaroy.notion.site" target="_blank"><img src="notion-logo-white.png" id="notion_icon"></img></a>
           </p>
           <p id="at"><tt>s-yada<i class="fas fa-at" aria-hidden="true"></i>is.naist.jp</tt></p>
           <p id="at"><tt>contact<i class="fas fa-at" aria-hidden="true"></i>shuntaroy.com</tt></p>
@@ -620,6 +622,13 @@
         setLanguage($(this).data("lang"));
       });
       setLanguage(navigator.language || navigator.userLanguage || "en");
+    });
+    
+    // a work-around until Font Awesome supports Notion icon
+    $("#notion_icon").hover(function() { 
+      $("#notion_icon").attr('src', "notion-logo-no-background.png");
+    }, function() { 
+      $("#notion_icon").attr('src', "notion-logo-white.png"); 
     });
   </script>
   <!-- Cloudflare Web Analytics -->
