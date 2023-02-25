@@ -1,29 +1,24 @@
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  /*    min-height: 200px;*/
-  padding-top: 50px;
-  /*    margin-bottom: 40px;*/
-  position: relative;
-  /*font-family: 'Source Sans Pro', sans-serif;*/
+  font-weight: 500;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI",
     "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
 }
 
-/*.lead */
-
-b {
-  font-weight: 400;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800 !important;
 }
 
-i.fab {
-  padding: 0 0.3ex;
+strong {
+  font-weight: 700;
 }
 
-*[id]:before {
+/* offset navbar height in suto scrolling */
+*[id]::before {
   display: block;
   content: " ";
   margin-top: -40px;
@@ -31,12 +26,7 @@ i.fab {
   visibility: hidden;
 }
 
-header.jumbotron {
-  /* position: absolute; */
-  /* bottom: -20px; */
-  /* left: 0; */
-  /* width: 400px; */
-  height: 95vh;
+header.hero {
   background-image: url("./assets/myartwork_web.svg");
   background-size: cover;
   background-position: left;
@@ -44,66 +34,49 @@ header.jumbotron {
   background-color: rgba(255, 255, 255, 1);
 }
 
-header .row:first-child {
-  padding-top: 15vh;
-  padding-bottom: 5vh;
-}
-
-header.jumbotron h1 {
-  /*padding-bottom: 1em;*/
+header.hero h1 {
   font-family: "Cardo", serif;
-  font-size: 10vh;
-  font-weight: 700;
-  text-shadow: 0 0 15px #aaa;
-}
-
-header.jumbotron h2 {
-  font-weight: 700;
   font-size: 8vh;
-  /*color: cadetblue;*/
+  font-weight: 800;
+  text-shadow: 0 0 15px #bebebe;
+}
+
+header.hero h2 {
+  font-weight: 800;
+  font-size: 6vh;
   font-family: serif;
-  text-shadow: 0 0 15px #aaa;
+  text-shadow: 0 0 15px #bebebe;
 }
 
-header #initial {
-  max-width: 31em;
-  width: 95vw;
-  background-color: rgba(0, 150, 150, 0.65);
-  border-radius: 10px;
-  color: white;
-  padding: 0.5em 2em 0.1em 2em;
+#MyIcon {
+  max-width: 15vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#initial p {
-  font-weight: 500;
+#MyIcon img {
+  border-radius: 5%;
+  box-shadow: 0 0 15px #bebebe;
 }
 
-#initial b {
-  font-weight: 700;
-}
-
-@media (max-width: 480px) {
-  header #inital {
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
-}
-/* avoid overrap of #inital and #main in iPhone SE */
-@media (max-width: 320px) {
-  #main {
-    margin-top: 15vh;
-  }
-}
-
-header p#at {
-  font-size: 1em;
-}
-
-header i {
+.box {
+  max-width: 94vw;
+  background: linear-gradient(to right, #00b4db, #0084b0);
   color: white;
 }
 
-header i:not(.fa-at):hover {
+#initial strong {
+  color: white;
+}
+
+#social i.lab {
+  font-size: 32px;
+  color: white;
+  padding: 0 0.3ex;
+}
+
+#social i:not(.la-at):hover {
   transition: 0.3s;
   color: black;
 }
@@ -112,80 +85,45 @@ header i:not(.fa-at):hover {
 #notion_icon {
   margin: 0.1em 0 0 0.4em;
   vertical-align: top;
-  width: 24px;
-  height: 24px;
+  width: 27px;
+  height: 27px;
 }
 
-/*#main {
-  overflow: hidden;
-}*/
-
-#main h2 {
-  font-weight: 900;
-  border-bottom: 3px solid lightseagreen;
-  /*     color: ; */
+#down {
+  margin-top: 1em;
 }
 
-#main h3 {
-  font-weight: 700;
-}
-
-#contact span {
-  font-size: 1.1em;
-}
-
-#work span {
-  padding-top: 0em;
-  font-size: 1.1em;
-}
-
-#projects {
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
-@media (max-width: 991px) {
-  .text-center-sm {
-    text-align: center;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
 }
 
-#about .col-md-5 {
-  padding-top: 3em;
+#down i.las {
+  font-size: 32px;
+  color: white;
+  animation: fadeIn 1s infinite alternate;
 }
 
-/*#main>.row {
-    padding-top: 3em;
-}*/
 
-#main .row:first-child {
-  padding-top: 0em;
-}
-
-#main dl {
-  font-size: 1.25em;
+#main h3 {
+  border-bottom: 4px solid lightseagreen;
 }
 
 #main dt {
+  font-weight: 700;
   color: lightseagreen;
 }
 
-#main > .row:last-child {
-  margin-bottom: 5em;
-}
-
-.footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  height: 40px;
-  background-color: #f5f5f5;
-}
-
-.footer p {
-  padding-top: 10px;
+#main dd ul {
+  margin-top: 0;
 }
 
 #orcid-id-logo {
   vertical-align: text-top;
+}
+
+footer {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
