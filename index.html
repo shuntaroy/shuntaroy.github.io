@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Shuntaro Yada - Profile and CV</title>
 
+  <!-- Mobile bookmark icons -->
   <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
@@ -26,10 +24,12 @@
   <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
+  <!-- Page metadata -->
   <meta content="Shuntaro Yada - Profile and CV" name="title">
   <meta content="The profile site of Shuntaro Yada, a Library and Information Science researcher." name="description">
   <!-- <meta content='' name='keywords'> -->
 
+  <!-- Social Card Information -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Shuntaro Yada - Profile and CV" />
   <meta property="og:description"
@@ -40,390 +40,373 @@
   <meta content="summary" name="twitter:card" />
   <meta content="@shntryd" name="twitter:site" />
 
-  <!-- Bootstrap -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <!-- <script src="https://kit.fontawesome.com/3a31912c96.js" crossorigin="anonymous"></script> -->
-  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
-
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Cardo:700" rel="stylesheet">
   <!-- |Source+Sans+Pro:200,300,400,600,700,900 -->
   <link href="custom.css" media="screen" rel="stylesheet">
-
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
 </head>
 
-<body data-spy="scroll" data-target="#navbar">
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-          aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand lang-en" href="/" id="brand">Shuntaro Yada</a>
-        <a class="navbar-brand lang-ja" href="/" id="brand">矢田 竣太郎</a>
+<body class="has-navbar-fixed-top">
+
+  <nav class="navbar is-fixed-top has-shadow is-light" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/" id="brand">
+          <strong>
+            <data class="lang-en">Shuntaro Yada</data>
+            <data class="lang-ja">矢田 竣太郎</data>
+          </strong>
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="#navbar">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <!-- left side -->
-        <ul class="nav navbar-nav">
-          <li>
-            <a class="lang-en" href="#about">About</a>
-            <a class="lang-ja" href="#about">プロフィール</a>
-          </li>
-          <li>
-            <a class="lang-en" href="#education">Education</a>
-            <a class="lang-ja" href="#education">学歴</a>
-          </li>
-          <li>
-            <a class="lang-en" href="#employment">Employment</a>
-            <a class="lang-ja" href="#employment">職歴</a>
-          </li>
-          <li>
-            <a class="lang-en" href="#skill">Skills</a>
-            <a class="lang-ja" href="#skill">技能</a>
-          </li>
-        </ul>
-        <!-- right side -->
-        <ul class="nav navbar-nav navbar-right">
-          <!-- <li><a href="#">English</a></li> -->
-          <!-- <li><a href="#">日本語</a></li> -->
-          <!-- <li class="nav-item lang-selector"> -->
-          <li>
-            <a class="lang" data-lang="en">English</a>
-          </li>
-          <!-- <li class="nav-item lang-selector"> -->
-          <li>
-            <a class="lang" data-lang="ja">日本語</a>
-          </li>
-        </ul>
+
+      <div id="navbar" class="navbar-menu has-background-light">
+        
+        <div class="navbar-start">
+          <a class="navbar-item" href="#about">
+            <data class="lang-en">About</data>
+            <data class="lang-ja">プロフィール</data>
+          </a>
+          <a class="navbar-item" href="#education">
+            <data class="lang-en">Education</data>
+            <data class="lang-ja">学歴</data>
+          </a>
+          <a class="navbar-item" href="#employment">
+            <data class="lang-en" >Employment</data>
+            <data class="lang-ja">職歴</data>
+          </a>
+          <a class="navbar-item" href="#skill">
+            <data class="lang-en">Skills</data>
+            <data class="lang-ja">技能</data>
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <a class="navbar-item lang" data-lang="en">English</a>
+          <a class="navbar-item lang" data-lang="ja">日本語</a>
+        </div>
       </div>
-      <!--/.nav-collapse -->
-    </div>
   </nav>
 
-  <!-- Jumbotron -->
-  <header class="jumbotron">
-    <div class="container text-center">
-      <div class="row">
-        <h1>YADA, Shuntaro</h1>
-        <h2>矢田 竣太郎</h2>
+  <header class="hero is-fullheight-with-navbar">
+  <!-- <header class="hero is-large"> -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">YADA, Shuntaro</h1>
+        <h2 class="subtitle">矢田 竣太郎</h2>
+        <figure id="MyIcon" class="image">
+          <img src="./assets/myicon.jpg" alt="My profile image">
+        </figure>
       </div>
-      <div class="row">
-        <div class="center-block" id="initial">
-          <p class="lang-en">I am an assistant professor working on <b>social computing</b> and <b>medical language
-              processing</b> at <b>NAIST</b> in Japan.</p>
-          <p class="lang-ja">NAIST ソーシャル・コンピューティング研究室の助教で、<b>SNS応用</b>と<b>医療言語処理</b>が専門です。</p>
-          <p id="social">
-            <a href="https://twitter.com/shntryd" target="_blank"><i class="fab fa-lg fa-twitter"></i></a>
-            <a href="https://www.instagram.com/shuntaroy" target="_blank"><i class="fab fa-lg fa-instagram"></i></a>
-            <a href="https://www.flickr.com/photos/shuntaroy" target="_blank"><i class="fab fa-lg fa-flickr"></i></a>
-            <a href="https://github.com/shuntaroy" target="_blank"><i class="fab fa-lg fa-github"></i></a>
-            <a href="http://speakerdeck.com/shuntaroy" target="_blank"><i class="fab fa-lg fa-speaker-deck"></i></a>
-            <a href="https://www.linkedin.com/in/shuntaroy" target="_blank"><i class="fab fa-lg fa-linkedin"></i></a>
-            <!-- a work-around until Font Awesome supports Notion icon -->
-            <a href="https://shuntaroy.notion.site" target="_blank"><img src="./assets/notion-logo-white.png"
-                id="notion_icon"></img></a>
-          </p>
-          <p id="at"><tt>s-yada<i class="fas fa-at" aria-hidden="true"></i>is.naist.jp</tt></p>
-          <p id="at"><tt>contact<i class="fas fa-at" aria-hidden="true"></i>shuntaroy.com</tt></p>
-        </div>
-      </div>
-      <!-- more findable lang-selector test -->
-      <!-- <div class="row text-center" id='lang-selector'>
-        <div class="btn-group" data-toggle="buttons">
-          <label class="lang btn btn-default" data-lang="en">
-            <input type="radio" name="options" id="option2" autocomplete="off"> English
-          </label>
-          <label class="lang btn btn-default" data-lang="ja">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> 日本語
-          </label>
-        </div>
-      </div> -->
     </div>
-    <!-- /container -->
+    <div class="container has-text-centered" id="initial">
+      <div class="columns is-centered">
+        <div class="column is-narrow is-three-fifths-tablet">
+          <div class="box">
+            <p class="lang-en">I am an assistant professor working on <strong>social computing</strong> and <strong>medical
+                language
+                processing</strong> at <strong>NAIST</strong> in Japan.</p>
+            <p class="lang-ja">NAIST ソーシャル・コンピューティング研究室の助教で<strong>SNS応用</strong>と<strong>医療言語処理</strong>が専門です。</p>
+            <p id="social" class="mt-2">
+              <a href="https://twitter.com/shntryd" target="_blank"><i class="lab la-twitter"></i></a>
+              <a href="https://www.instagram.com/shuntaroy" target="_blank"><i class="lab la-instagram"></i></a>
+              <a href="https://www.flickr.com/photos/shuntaroy" target="_blank"><i class="lab la-flickr"></i></a>
+              <a href="https://github.com/shuntaroy" target="_blank"><i class="lab la-github"></i></a>
+              <a href="http://speakerdeck.com/shuntaroy" target="_blank"><i class="lab la-speaker-deck"></i></a>
+              <a href="https://www.linkedin.com/in/shuntaroy" target="_blank"><i class="lab la-linkedin"></i></a>
+              <!-- a work-around until Line Awesome supports Notion icon -->
+              <a href="https://shuntaroy.notion.site" target="_blank"><img src="./assets/notion-logo-white.png"
+                  id="notion_icon"></img></a>
+            </p>
+            <p id="at" class="is-family-monospace">s-yada<i class="las la-at" aria-hidden="true"></i>is.naist.jp</p>
+            <p id="at" class="is-family-monospace">contact<i class="las la-at" aria-hidden="true"></i>shuntaroy.com</p>
+            <p id="down"><i class="las la-angle-double-down"></i></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <div class="container" id="main">
-    <div class="row" id='about'>
-      <div class="col-md-3 text-center-sm">
-        <h2>
+  <section class="section" id="main">
+    <div class="columns" id='about'>
+      <div class="column is-3 is-offset-1 has-text-centered">
+        <h3 class="title is-4">
           <data class="lang-en">About</data>
           <data class="lang-ja">プロフィール</data>
-        </h2>
-        <img src="./assets/myicon.jpg" alt="my icon image" class="img-thumbnail" width="200" height="300">
+        </h3>
       </div>
 
-      <div class="col-md-9">
-        <h3>
+      <div class="column is-7 content">
+        <h4>
           <data class="lang-en">Research Theme</data>
           <data class="lang-ja">研究テーマ</data>
-        </h3>
-        <p class="lead lang-en">
+        </h4>
+        <p class="lang-en">
           I specialise in Library and Information Science and Social Computing on social media data, making use of
           Natural Language Processing (NLP).
           Now I apply my expertise to medical NLP and clinical social computing.
           My main research theme is the development of a digital surrogate system for passive exposure to books,
-          <b>Serendy</b>.
+          <strong>Serendy</strong>.
           By providing users with online social mentions of books (e.g. tweets that mention books), this system
           simulates a digital version of the situation where one discovers books by chance through daily informal
           conversations with their friends.
-          Through this system, I aim to inspire <i>infrequent readers</i>, those who have the desire to establish the
+          Through this system, I aim to inspire <strong>infrequent readers</strong>, those who have the desire to establish the
           reading habit but find it difficult to determine which book to read next.
           Ultimately, my research goal is to design a digital environment for people to discover and learn anything
           passively with fun.
         </p>
-        <p class="lead lang-ja">
+        <p class="lang-ja">
           私は図書館情報学を専攻し、SNSを活用したソーシャルコンピューティングと自然言語処理を専門としています。
           その経験を生かして現在は医療言語処理にも従事しています．
           人々が自然に楽しく学べてしまうような環境づくりに関心があり、
           主たる研究テーマとして、「何を読めばよいかわからない」と悩んでいる人たち（前読書家）を読書へと
-          <b>触発</b>する図書クチコミ推薦システム <b>Serendy</b> を研究・開発しています。
+          <strong>触発</strong>する図書クチコミ推薦システム <strong>Serendy</strong> を研究・開発しています。
           具体的には、ユーザが Twitter などの SNS でつながっている人々による図書への言及を、そのユーザのデジタル環境（スマートフォンなど）に届けるシステムです。
           これは、物理的な空間で見受けられる「本との偶然の出会い」をオンライン上にも埋め込む取り組みになっていて、特に知人・友人との日常会話で不意に本が言及されるというシチュエーションに着目したものです。
         </p>
-        <div class="row">
-          <div class="col-md-7" id="contact">
-            <h3>
+        <div class="columns is-vcentered">
+          <div class="column is-5" id="contact">
+            <h5>
               <data class="lang-en">Contact details</data>
               <data class="lang-ja">詳細</data>
-            </h3>
-            <span>
-              <data class="lang-en">Shuntaro Yada</data>
-              <data class="lang-ja">矢田 竣太郎（やだ しゅんたろう）</data>
-            </span><br>
-            <span>
-              <data class="lang-en">Male, born 1991</data>
-              <data class="lang-ja">男性/1991年生まれ</data>
-            </span><br>
-            <span><a href="https://orcid.org/0000-0002-6209-1054" target="_blank">ORCID <img id="orcid-id-logo"
-                  src="./assets/ORCID-iD_icon-16x16.png" width="16" height="16" alt="ORCID logo">
-                0000-0002-6209-1054</a></span><br>
-            <span><strong>
-                <data class="lang-en">Affiliation</data>
-                <data class="lang-ja">所属</data>
-              </strong></span><br>
-            <span>
-              <a class="lang-en" href="https://sociocom.naist.jp" target="_blank">Social Computing Laboratory,</a>
-              <a class="lang-ja" href="http://www.naist.jp/" target="_blank">奈良先端科学技術大学院大学 先端科学技術研究科 情報科学領域</a>
-            </span><br>
-            <span>
-              <a class="lang-en" href="http://www.naist.jp/en/" target="_blank">Nara Institute of Science and
-                Technology</a>
-              <a class="lang-ja" href="https://sociocom.naist.jp" target="_blank">ソーシャル・コンピューティング研究室</a>
-            </span><br>
+            </h5>
+            <ul>
+              <li>
+                <data class="lang-en">Shuntaro Yada</data>
+                <data class="lang-ja">矢田 竣太郎（やだ しゅんたろう）</data>
+              </li>
+              <li>
+                <data class="lang-en">Male, born 1991</data>
+                <data class="lang-ja">男性 / 1991年生まれ</data>
+              </li>
+              <li>
+                <a href="https://orcid.org/0000-0002-6209-1054" target="_blank">
+                  ORCID <img id="orcid-id-logo" src="./assets/ORCID-iD_icon-16x16.png" width="16" height="16" alt="ORCID logo">
+                  0000-0002-6209-1054
+                </a>
+              </li>
+              <li>
+                <data class="lang-en">Affiliation:</data>
+                <data class="lang-ja">所属：</data>
+                <a class="is-underlined lang-en" href="https://sociocom.naist.jp" target="_blank">Social Computing Laboratory,</a>
+                <a class="is-underlined lang-ja" href="http://www.naist.jp/" target="_blank">奈良先端科学技術大学院大学 先端科学技術研究科 情報科学領域</a>
+                <a class="is-underlined lang-en" href="http://www.naist.jp/en/" target="_blank">Nara Institute of Science and
+                  Technology</a>
+                <a class="is-underlined lang-ja" href="https://sociocom.naist.jp" target="_blank">ソーシャル・コンピューティング研究室</a>
+            </ul>
           </div>
-          <div class="col-md-5 text-center">
-            <a class="btn btn btn-default" href="https://researchmap.jp/shuntaroy" role="button"
-              aria-describedby="helpBlock" target="_blank">
-              <i class="fas fa-lg fa-external-link-alt"></i>
+
+          <div class="column has-text-centered">
+            <a class="button is-link is-small" href="https://researchmap.jp/shuntaroy" target="_blank">
+              <span class="icon"><i class="las la-external-link-alt"></i></span>
               <data class="lang-en">Detailed CV with publication lists</data>
               <data class="lang-ja">業績を含めた詳細な履歴書はこちら</data>
             </a>
-            <span id="helpBlock" class="help-block">Powered by Researchmap.jp</span>
+            <p class="is-small">by Researchmap.jp</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="row" id="projects">
-      <img class="img-responsive lang-ja" src="./assets/projects-ja.png" alt="現在の主な研究プロジェクト">
-      <img class="img-responsive lang-en" src="./assets/projects-en.png" alt="Current research projects">
+    <div class="columns mb-6" id="projects">
+      <div class="column is-10 is-offset-1">
+      <figure class="image">
+        <img class="lang-ja" src="./assets/projects-ja.png" alt="現在の主な研究プロジェクト">
+        <img class="lang-en" src="./assets/projects-en.png" alt="Current research projects">
+      </figure></div>
     </div>
 
-    <div class="row" id="education">
-      <div class="col-md-3 text-center-sm">
-        <h2>
+    <div class="columns content" id="education">
+      <div class="column is-3 is-offset-1 has-text-centered">
+        <h3>
           <data class="lang-en">Education</data>
           <data class="lang-ja">学歴</data>
-        </h2>
+        </h3>
       </div>
 
-      <div class="col-md-9">
-        <h3>
+      <div class="column is-7">
+        <h4>
           <data class="lang-en">Graduate School of Education, the University of Tokyo</data>
           <data class="lang-ja">東京大学大学院 教育学研究科</data>
-        </h3>
-        <p class="lead">
+        </h4>
+        <p>
           <data class="lang-en">PhD (Education) | <strong>April 2020</strong> </data>
           <data class="lang-ja">博士（教育学） | <strong>2020年4月</strong></data>
         </p>
 
-        <h3>
+        <h4>
           <data class="lang-en">Graduate School of Education, the University of Tokyo</data>
           <data class="lang-ja">東京大学大学院 教育学研究科</data>
-        </h3>
-        <p class="lead">
+        </h4>
+        <p>
           <data class="lang-en">Master of Arts (Education) | <strong>March 2016</strong></data>
           <data class="lang-ja">修士（教育学）| <strong>2016年3月</strong></data>
         </p>
 
-        <h3>
+        <h4>
           <data class="lang-en">The University of Tokyo</data>
           <data class="lang-ja">東京大学 教育学部</data>
-        </h3>
-        <p class="lead">
+        </h4>
+        <p>
           <data class="lang-en">Bachelor of Arts (Education) | <strong>March 2014</strong></data>
           <data class="lang-ja">教育実践・政策学コース 学士（教育学）| <strong>2014年3月</strong></data>
         </p>
 
         <!-- Japanese only -->
         <data class="lang-ja">
-          <h3>東京大学 教養学部</h3>
-          <p class="lead">理科二類 | <strong>2010年4月〜2012年3月</strong></p>
+          <h4>東京大学 教養学部</h4>
+          <p>理科二類 | <strong>2010年4月〜2012年3月</strong></p>
         </data>
       </div>
     </div>
 
-    <div class="row" id="employment">
-      <div class="col-md-3 text-center-sm">
-        <h2>
+    <div class="columns content" id="employment">
+      <div class="column is-3 is-offset-1 has-text-centered">
+        <h3>
           <data class="lang-en">Employment</data>
           <data class="lang-ja">職歴</data>
-        </h2>
+        </h3>
       </div>
 
-      <div class="col-md-9">
-        <h3>
+      <div class="column is-7">
+        <h4>
           <data class="lang-en">Nara Institute of Science and Technology</data>
           <data class="lang-ja">奈良先端科学技術大学院大学</data>
           <small>
             <data class="lang-en">Social Computing Laboratory</data>
             <data class="lang-ja">ソーシャル・コンピューティング研究室</data>
-            <a href="https://sociocom.naist.jp" target="_blank"><i class="fas fa-link"></i></a>
+            <a href="https://sociocom.naist.jp" target="_blank"><i class="las la-link"></i></a>
           </small>
-        </h3>
-        <p class="lead">
+        </h4>
+        <p>
           <data class="lang-en">Assistant Professor | <strong>Nov 2020–Present</strong></data>
           <data class="lang-ja">助教 | <strong>2020年11月〜現在</strong></data>
         </p>
-        <h3>
+        <h4>
           <data class="lang-en">Nara Institute of Science and Technology</data>
           <data class="lang-ja">奈良先端科学技術大学院大学</data>
           <small>
             <data class="lang-en">Social Computing Laboratory</data>
             <data class="lang-ja">ソーシャル・コンピューティング研究室</data>
-            <a href="https://sociocom.naist.jp" target="_blank"><i class="fas fa-link"></i></a>
+            <a href="https://sociocom.naist.jp" target="_blank"><i class="las la-link"></i></a>
           </small>
-        </h3>
-        <p class="lead">
+        </h4>
+        <p>
           <data class="lang-en">Postdoctoral fellow | <strong>May–Oct 2020</strong></data>
           <data class="lang-ja">博士研究員 | <strong>2020年5月〜2020年10月</strong></data>
         </p>
-        <h3>
+        <h4>
           <data class="lang-en">Nara Institute of Science and Technology</data>
           <data class="lang-ja">奈良先端科学技術大学院大学</data>
           <small>
             <data class="lang-en">Social Computing Laboratory</data>
             <data class="lang-ja">ソーシャル・コンピューティング研究室</data>
-            <a href="https://sociocom.naist.jp" target="_blank"><i class="fas fa-link"></i></a>
+            <a href="https://sociocom.naist.jp" target="_blank"><i class="las la-link"></i></a>
           </small>
-        </h3>
-        <p class="lead">
+        </h4>
+        <p>
           <data class="lang-en">Researcher | <strong>September 2019–April 2020</strong></data>
           <data class="lang-ja">研究員 | <strong>2019年9月〜2020年4月</strong></data>
         </p>
-        <h3>
+        <h4>
           <data class="lang-en">CSIRO (Australia)</data>
           <data class="lang-ja">オーストラリア連邦科学産業研究機構</data>
           <small>
             Data61 Language and Social Computing Team
-            <a href="https://research.csiro.au/lasc/" target="_blank"><i class="fas fa-link"></i></a>
+            <a href="https://research.csiro.au/lasc/" target="_blank"><i class="las la-link"></i></a>
           </small>
-        </h3>
-        <p class="lead">
+        </h4>
+        <p>
           <data class="lang-en">Visiting Scientist | <strong>May–August 2019</strong></data>
           <data class="lang-ja">客員研究員 | <strong>2019年5月〜2018年8月</strong></data>
         </p>
-        <h3>
+        <h4>
           <data class="lang-en">UTokyo LISLab</data>
           <data class="lang-ja">東京大学 図書館情報学研究室</data>
-        </h3>
-        <p class="lead">
+        </h4>
+        <p>
           <data class="lang-en">Researcher | <strong>April–August 2019</strong></data>
           <data class="lang-ja">特任研究員 | <strong>2019年4月〜2019年8月</strong></data>
         </p>
 
-        <h3>
+        <h4>
           <data class="lang-en">CSIRO (Australia)</data>
           <data class="lang-ja">オーストラリア連邦科学産業研究機構</data>
           <small>
             Data61 Language and Social Computing Team
-            <a href="https://research.csiro.au/lasc/" target="_blank"><i class="fas fa-link"></i></a>
+            <a href="https://research.csiro.au/lasc/" target="_blank"><i class="las la-link"></i></a>
           </small>
-        </h3>
-        <p class="lead">
+        </h4>
+        <p>
           <data class="lang-en">Visiting Scientist | <strong>March–May 2018</strong></data>
           <data class="lang-ja">客員研究員 | <strong>2018年3月〜2018年5月</strong></data>
         </p>
 
-        <h3>
+        <h4>
           KDDI
           <data class="lang-en">Research (Japan)</data>
           <data class="lang-ja">
             総合研究所 <small>知能メディアグループ</small>
           </data>
-        </h3>
-        <p class="lead">
+        </h4>
+        <p>
           <data class="lang-en">Student Intern | <strong>October 2016–June 2017</strong></data>
           <data class="lang-ja">学生インターン | <strong>2016年10月〜2017年6月</strong></data>
         </p>
 
-        <h3>
+        <h4>
           <data class="lang-en">UTokyo</data>
           <data class="lang-ja">東大</data>
           Mono-Lab-Japan
-          <small><a href="http://www.todai-mono-lab-japan.com" target="_blank"><i class="fas fa-link"></i></a></small>
-        </h3>
-        <p class="lead">
+          <small><a href="http://www.todai-mono-lab-japan.com" target="_blank"><i class="las la-link"></i></a></small>
+        </h4>
+        <p>
           <data class="lang-en">Senior Student Instructor | <strong>2014–2017</strong></data>
           <data class="lang-ja">学生講師・コアスタッフ | <strong>2014年〜2017年</strong></data>
         </p>
-        <span class="help-block">
+        <small>
           <data class="lang-en">
             Senior Student Instructor of a co-research project of the Makino laboratory in the University of Tokyo with
             a manufacturing company, WAIDA MFG. co., ltd., and the Board of Education of Gifu city. This project
             provides a fabrication laboratory (fab lab) and workshops for students at high schools and elementary
             schools as well as their parents. The main content of the workshops, which I have taught and guided, is Rube
-            Goldberg machine development, electronics projects (we used <a href="https://www.arduino.cc"
+            Goldberg machine development, electronics projects (we used <a class="is-underlined" href="https://www.arduino.cc"
               target="_blank">Arduino</a>), and 3D printing (e.g. <a
-              href="http://www.todai-mono-lab-japan.com/posts/2134406?categoryIds=275621" target="_blank">my post on our
+              class="is-underlined" href="http://www.todai-mono-lab-japan.com/posts/2134406?categoryIds=275621" target="_blank">my post on our
               blog in Japanese</a>).
           </data>
           <data class="lang-ja">
             高山市と岐阜市の小学生を対象に、自由な発想でピタゴラ装置を制作してもらうワークショップにおいて、企画・運営と講座の講師を勤めました（例：<a
-              href="http://www.todai-mono-lab-japan.com/posts/2134406?categoryIds=275621"
+              class="is-underlined" href="http://www.todai-mono-lab-japan.com/posts/2134406?categoryIds=275621"
               target="_blank">活動報告ブログ記事</a>）。
-            とくに子供達のピタゴラ装置に一工夫を加えるための <a href="https://www.arduino.cc" target="_blank">Arduino</a> の実習も担当していました。
+            とくに子供達のピタゴラ装置に一工夫を加えるための <a class="is-underlined" href="https://www.arduino.cc" target="_blank">Arduino</a> の実習も担当していました。
             このプログラムを通じて、市行政・地方教育委員会・高専/工業高校生徒ボランティア・退職技術者・大学生スタッフといった様々な人々と連携する貴重な経験を積みました。
           </data>
-        </span>
+        </small>
 
       </div>
     </div>
 
-    <div class="row" id="skill">
-      <div class="col-md-3 text-center-sm">
-        <h2>
+    <div class="columns content" id="skill">
+      <div class="column is-3 is-offset-1 has-text-centered">
+        <h3>
           <data class="lang-en">Skills</data>
           <data class="lang-ja">技能</data>
-        </h2>
+        </h3>
       </div>
 
-      <div class="col-md-9">
+      <div class="column is-7">
 
-        <h3>
+        <h4>
           <data class="lang-en">Natural Languages</data>
           <data class="lang-ja">自然言語</data>
-        </h3>
+        </h4>
         <dl class="dl-horizontal">
           <dt>
             <data class="lang-en">Japanese</data>
@@ -461,10 +444,10 @@
           </dd>
         </dl>
 
-        <h3>
+        <h4>
           <data class="lang-en">Programming Languages</data>
           <data class="lang-ja">プログラミング言語</data>
-        </h3>
+        </h4>
         <dl class="dl-horizontal">
           <dt>Python 3</dt>
           <dd>
@@ -482,32 +465,32 @@
               <li>
                 <data class="lang-en">Machine Learning </data>
                 <data class="lang-ja">機械学習</data>
-                (<a href="http://scikit-learn.org/stable/" target="_blank">sklearn</a>, <a
-                  href="https://www.tensorflow.org/" target="_blank">tensorflow</a>, & <a href="https://pytorch.org/"
+                (<a class="is-underlined" href="http://scikit-learn.org/stable/" target="_blank">sklearn</a>, <a
+                  class="is-underlined" href="https://www.tensorflow.org/" target="_blank">tensorflow</a>, & <a class="is-underlined" href="https://pytorch.org/"
                   target="_blank">pytorch</a>)
               </li>
               <li>
                 <data class="lang-en">Data Analysis</data>
                 <data class="lang-ja">データ分析</data>
-                (<a href="http://pandas.pydata.org" target="_blank">pandas</a>, <a href="http://www.numpy.org/"
-                  target="_blank">numpy</a>, & <a href="https://www.scipy.org/" target="_blank">scipy</a>)
+                (<a class="is-underlined" href="http://pandas.pydata.org" target="_blank">pandas</a>, <a class="is-underlined" href="http://www.numpy.org/"
+                  target="_blank">numpy</a>, & <a class="is-underlined" href="https://www.scipy.org/" target="_blank">scipy</a>)
               </li>
               <li>
                 <data class="lang-en">Data Visualisation</data>
                 <data class="lang-ja">データ可視化</data>
-                (<a href="https://matplotlib.org/" target="_blank">matplotlib</a>, <a href="https://seaborn.pydata.org/"
-                  target="_blank">seaborn</a>, and <a href="https://plotly.com" target="_blank">Plotly</a>)
+                (<a class="is-underlined" href="https://matplotlib.org/" target="_blank">matplotlib</a>, <a class="is-underlined" href="https://seaborn.pydata.org/"
+                  target="_blank">seaborn</a>, and <a class="is-underlined" href="https://plotly.com" target="_blank">Plotly</a>)
               </li>
               <li>
-                <data>Web API</data> (<a href="https://flask.palletsprojects.com/" taget="_blank">Flask</a> & <a href="https://fastapi.tiangolo.com/" target="_blank">FastAPI</a>)
+                <data>Web API</data> (<a class="is-underlined" href="https://flask.palletsprojects.com/" taget="_blank">Flask</a> & <a class="is-underlined" href="https://fastapi.tiangolo.com/" target="_blank">FastAPI</a>)
               </li>
             </ul>
           </dd>
 
           <dt>Elm</dt>
           <dd>
-            <data class="lang-en">Web front-end development (e.g. single page applications) since 2020 (e.g. <a href="https://github.com/bookreach/bookreach-ui-ce/" target="_blank">BookReach UI</a>)</data>
-            <data class="lang-ja">2020年からSingle page application (SPA) など Web フロントエンド開発で常用（例：<a href="https://github.com/bookreach/bookreach-ui-ce/" target="_blank">BookReach UI</a>）</data>
+            <data class="lang-en">Web front-end development (e.g. single page applications) since 2020 (e.g. <a class="is-underlined" href="https://github.com/bookreach/bookreach-ui-ce/" target="_blank">BookReach UI</a>)</data>
+            <data class="lang-ja">2020年からSingle page application (SPA) など Web フロントエンド開発で常用（例：<a class="is-underlined" href="https://github.com/bookreach/bookreach-ui-ce/" target="_blank">BookReach UI</a>）</data>
           </dd>
 
           <dt>JavaScript</dt>
@@ -520,7 +503,7 @@
           <dt>Ruby</dt>
           <dd>
             <data class="lang-en">Intermittently using until 2015 for building simple web applications (with <a
-                href="https://rubyonrails.org/" target="_blank">Ruby on Rails</a> or <a href="http://sinatrarb.com/"
+                class="is-underlined" href="https://rubyonrails.org/" target="_blank">Ruby on Rails</a> or <a class="is-underlined" href="http://sinatrarb.com/"
                 target="_blank">Sinatra</a>), and pre-processing textual data</data>
             <data class="lang-ja">2015年まで断続的に使用：Rails や Sinatra を使った Web アプリケーション構築やテキストの前処理</data>
           </dd>
@@ -541,10 +524,10 @@
           </dd>
         </dl>
 
-        <h3>
+        <h4>
           <data class="lang-en">Markup Languages</data>
           <data class="lang-ja">マークアップ言語</data>
-        </h3>
+        </h4>
         <dl class="dl-horizontal">
           <dt>HTML (and CSS)</dt>
           <dd>
@@ -559,14 +542,14 @@
           </dd>
         </dl>
 
-        <h3>
+        <h4>
           <data class="lang-en">Tools</data>
           <data class="lang-ja">ツール</data>
-        </h3>
+        </h4>
         <dl class="dl-horizontal">
           <dt>Dev tools</dt>
           <dd>
-            VS Code, Vim (Neovim), tmux, Git, & Docker (and <a href="https://github.com/sylabs/singularity"
+            VS Code, Vim (Neovim), tmux, Git, & Docker (and <a class="is-underlined" href="https://github.com/sylabs/singularity"
               target="_blank">Singularity</a>)
           </dd>
 
@@ -597,9 +580,9 @@
             <ul>
               <li>
                 Premiere Pro:
-                <data class="lang-en">experience in creating <a href="https://www.youtube.com/watch?v=CormMX8JLI4"
+                <data class="lang-en">experience in creating <a class="is-underlined" href="https://www.youtube.com/watch?v=CormMX8JLI4"
                     target="_blank">a workshop PV</a> and short independent films</data>
-                <data class="lang-ja"><a href="https://www.youtube.com/watch?v=CormMX8JLI4"
+                <data class="lang-ja"><a class="is-underlined" href="https://www.youtube.com/watch?v=CormMX8JLI4"
                     target="_blank">PV</a>や短編映画制作といったポストプロダクションの経験</data>
               </li>
               <li>
@@ -613,76 +596,32 @@
           <dt>Vector graphics</dt>
           <dd>
             Illustrator & Affinity Designer:
-            <data class="lang-en">Designing <a href="http://researchmap.jp/?action=cv_download_main&upload_id=80192"
+            <data class="lang-en">Designing <a class="is-underlined" href="http://researchmap.jp/?action=cv_download_main&upload_id=80192"
                 target="_blank">academic posters</a> and business cards for myself and others</data>
-            <data class="lang-ja"><a href="http://researchmap.jp/?action=cv_download_main&upload_id=80192"
+            <data class="lang-ja"><a class="is-underlined" href="http://researchmap.jp/?action=cv_download_main&upload_id=80192"
                 target="_blank">学会ポスター</a>や名刺の制作</data>
           </dd>
         </dl>
       </div>
     </div>
-  </div>
+  </section>
 
-  <footer class="footer">
-    <div class="container text-center">
-      <p class="text-muted">
-        <i class="far fa-copyright"></i>
+  <footer class="footer has-background-light">
+    <div class="content is-small has-text-centered">
+      <p>
+        <span><i class="lar la-copyright"></i></span>
         <data class="lang-en">Shuntaro Yada</data>
         <data class="lang-ja">矢田 竣太郎</data>
       </p>
     </div>
   </footer>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- <script src="custom.js"></script> -->
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.0.0/jquery.smooth-scroll.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script>
-    // smoothScroll
-    $('#navbar a:not(.lang)').smoothScroll();
-    $("#brand").on('click', function () {
-      $("body,html").animate({
-        scrollTop: 0
-      }, 'slow');
-      return false;
-    });
-    $('.navbar-collapse a').click(function () {
-      $(".navbar-collapse").collapse('hide');
-    });
-
-    // multi-lang
-    $(document).ready(function () {
-      var setLanguage = function (lang) {
-        lang = lang.substr(0, 2);
-        var from = lang == 'en' ? 'ja' : 'en';
-        $('.lang-' + from).hide();
-        $('.lang-' + lang).fadeIn();
-        $('.lang').parent().removeClass("active")
-        $('.lang').each(function (i, el) {
-          if ($(el).data("lang") == lang) {
-            $(el).parent().addClass("active");
-          }
-        });
-      };
-      $(".lang").click(function () {
-        setLanguage($(this).data("lang"));
-      });
-      setLanguage(navigator.language || navigator.userLanguage || "en");
-    });
-
-    // a work-around until Font Awesome supports Notion icon
-    $("#notion_icon").hover(function () {
-      $("#notion_icon").attr('src', "./assets/notion-logo-no-background.png");
-    }, function () {
-      $("#notion_icon").attr('src', "./assets/notion-logo-white.png");
-    });
-  </script>
+  <script src="custom.js"></script>
   <!-- Cloudflare Web Analytics -->
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
     data-cf-beacon='{"token": "ceb89b16e79b44828b3f65d8fe22bc3a"}'></script>
-  <!-- End Cloudflare Web Analytics -->
 </body>
 
 </html>
