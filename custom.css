@@ -110,10 +110,10 @@ header i:not(.fa-at):hover {
 
 /* a work-around until Font Awesome supports Notion icon */
 #notion_icon {
-  margin: 0 0.3ex;
+  margin: 0.1em 0 0 0.4em;
   vertical-align: top;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 }
 
 /*#main {
