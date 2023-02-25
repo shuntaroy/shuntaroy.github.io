@@ -18,13 +18,13 @@ strong {
 }
 
 /* offset navbar height in suto scrolling */
-*[id]::before {
+/* *[id]::before {
   display: block;
   content: " ";
   margin-top: -40px;
   height: 40px;
   visibility: hidden;
-}
+} */
 
 header.hero {
   background-image: url("./assets/myartwork_web.svg");

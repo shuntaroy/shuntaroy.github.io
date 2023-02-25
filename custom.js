@@ -14,7 +14,7 @@ $(document).ready(function () {
     });
 
     // Smooth Scroll on navbar links
-    $('#navbar a:not(.lang)').smoothScroll();
+    $('#navbar a:not(.lang)').smoothScroll({ offset: -50 });
     $("#brand").on('click', function () {
         $("body,html").animate({
             scrollTop: 0
