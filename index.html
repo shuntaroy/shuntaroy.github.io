@@ -33,7 +33,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Shuntaro Yada - Profile and CV" />
   <meta property="og:description" content="The profile site of Shuntaro Yada, or a Library and Information Science researcher." />
-  <meta property="og:image" content="https://shuntaroy.com/myartwork_web.png" />
+  <meta property="og:image" content="https://shuntaroy.com/assets/myartwork_web.png" />
   <meta property="og:url" content="https://shuntaroy.com" />
   <meta property="og:site_name" content="Shuntaro Yada" />
   <meta content="summary" name="twitter:card" />
@@ -154,10 +154,10 @@
           <data class="lang-en">About</data>
           <data class="lang-ja">プロフィール</data>
         </h2>
-        <img src="myicon.jpg" alt="my icon image" class="img-thumbnail" width="200" height="300">
+        <img src="./assets/myicon.jpg" alt="my icon image" class="img-thumbnail" width="200" height="300">
       </div>
 
-      <div class="col-md-7">
+      <div class="col-md-9">
         <h3>
           <data class="lang-en">Research Theme</data>
           <data class="lang-ja">研究テーマ</data>
@@ -193,7 +193,7 @@
               <data class="lang-en">Male, born 1991</data>
               <data class="lang-ja">男性/1991年生まれ</data>
             </span><br>
-            <span><a href="https://orcid.org/0000-0002-6209-1054" target="_blank">ORCID <img id="orcid-id-logo" src="ORCID-iD_icon-16x16.png" width="16" height="16" alt="ORCID logo"> 0000-0002-6209-1054</a></span><br>
+            <span><a href="https://orcid.org/0000-0002-6209-1054" target="_blank">ORCID <img id="orcid-id-logo" src="./assets/ORCID-iD_icon-16x16.png" width="16" height="16" alt="ORCID logo"> 0000-0002-6209-1054</a></span><br>
             <span><strong>
               <data class="lang-en">Affiliation</data>
               <data class="lang-ja">所属</data>
@@ -219,6 +219,11 @@
       </div>
     </div>
 
+    <div class="row" id="projects">
+      <img class="img-responsive lang-ja" src="./assets/projects-ja.png" alt="現在の主な研究プロジェクト">
+      <img class="img-responsive lang-en" src="./assets/projects-en.png" alt="Current research projects">
+    </div>
+
     <div class="row" id="education">
       <div class="col-md-3 text-center-sm">
         <h2>
@@ -227,7 +232,7 @@
         </h2>
       </div>
 
-      <div class="col-md-7">
+      <div class="col-md-9">
         <h3>
           <data class="lang-en">Graduate School of Education, the University of Tokyo</data>
           <data class="lang-ja">東京大学大学院 教育学研究科</data>
@@ -271,7 +276,7 @@
         </h2>
       </div>
 
-      <div class="col-md-7">
+      <div class="col-md-9">
         <h3>
           <data class="lang-en">Nara Institute of Science and Technology</data>
           <data class="lang-ja">奈良先端科学技術大学院大学</data>
@@ -389,7 +394,7 @@
         </h2>
       </div>
 
-      <div class="col-md-7">
+      <div class="col-md-9">
 
         <h3>
           <data class="lang-en">Natural Languages</data>
@@ -468,22 +473,22 @@
             </ul>
           </dd>
 
-          <dt>Ruby</dt>
-          <dd>
-            <data class="lang-en">Intermittently using from 2010 for building simple web applications (with <a href="https://rubyonrails.org/" target="_blank">Ruby on Rails</a> or <a href="http://sinatrarb.com/" target="_blank">Sinatra</a>), and pre-processing textual data</data>
-            <data class="lang-ja">2010年から断続的に使用: Rails や Sinatra を使った Web アプリケーション構築やテキストの前処理</data>
-          </dd>
-
           <dt>Elm</dt>
           <dd>
-            <data class="lang-en">Web front-end development (e.g. single page applications)</data>
-            <data class="lang-ja">Single page application (SPA) など Web フロントエンド開発</data>
+            <data class="lang-en">Web front-end development (e.g. single page applications) since 2020</data>
+            <data class="lang-ja">2020年からSingle page application (SPA) など Web フロントエンド開発で常用</data>
           </dd>
 
           <dt>JavaScript</dt>
           <dd>
             <data class="lang-en">D3.js and jQuery (e.g. for designing a dashboard UI of user statistics visualisation)</data>
             <data class="lang-ja">D3.js および jQuery （例：統計データダッシュボードのUI制作）</data>
+          </dd>
+
+          <dt>Ruby</dt>
+          <dd>
+            <data class="lang-en">Intermittently using from 2010 for building simple web applications (with <a href="https://rubyonrails.org/" target="_blank">Ruby on Rails</a> or <a href="http://sinatrarb.com/" target="_blank">Sinatra</a>), and pre-processing textual data</data>
+            <data class="lang-ja">2010年から断続的に使用: Rails や Sinatra を使った Web アプリケーション構築やテキストの前処理</data>
           </dd>
 
           <dt>R</dt>
@@ -626,9 +631,9 @@
     
     // a work-around until Font Awesome supports Notion icon
     $("#notion_icon").hover(function() { 
-      $("#notion_icon").attr('src', "notion-logo-no-background.png");
+      $("#notion_icon").attr('src', "./assets/notion-logo-no-background.png");
     }, function() { 
-      $("#notion_icon").attr('src', "notion-logo-white.png"); 
+      $("#notion_icon").attr('src', "./assets/notion-logo-white.png"); 
     });
   </script>
   <!-- Cloudflare Web Analytics -->
