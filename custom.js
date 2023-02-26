@@ -7,13 +7,13 @@ $(document).ready(function () {
         $(".navbar-menu").toggleClass("is-active");
     });
 
-    // close navbar menu when click in mobile screens
+    // Close navbar menu when click in mobile screens
     $('.navbar-menu a').click(function () {
         $(".navbar-burger").removeClass('is-active');
         $(".navbar-menu").removeClass('is-active');
     });
 
-    // Smooth Scroll on navbar links
+    // Smooth Scroll on navbar links and down arrows
     $('#navbar a:not(.lang)').smoothScroll({ offset: -50 });
     $("#brand").on('click', function () {
         $("body,html").animate({
@@ -21,6 +21,7 @@ $(document).ready(function () {
         }, 'slow');
         return false;
     });
+    $('#down a').smoothScroll({ offset: -50 });
 
     // Switch language (default: English)
     var setLanguage = function (lang) {

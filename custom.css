@@ -17,15 +17,6 @@ strong {
   font-weight: 700;
 }
 
-/* offset navbar height in suto scrolling */
-/* *[id]::before {
-  display: block;
-  content: " ";
-  margin-top: -40px;
-  height: 40px;
-  visibility: hidden;
-} */
-
 header.hero {
   background-image: url("./assets/myartwork_web.svg");
   background-size: cover;
@@ -42,9 +33,9 @@ header.hero h1 {
 }
 
 header.hero h2 {
-  font-weight: 800;
-  font-size: 6vh;
   font-family: serif;
+  font-size: 6vh;
+  font-weight: 800;
   text-shadow: 0 0 15px #bebebe;
 }
 
@@ -60,70 +51,74 @@ header.hero h2 {
   box-shadow: 0 0 15px #bebebe;
 }
 
-.box {
+#initial .box {
   max-width: 94vw;
   background: linear-gradient(to right, #00b4db, #0084b0);
   color: white;
 }
 
+/* Enwhite strong which was somehow black by default */
 #initial strong {
   color: white;
 }
 
+/* Social icons */
 #social i.lab {
   font-size: 32px;
   color: white;
   padding: 0 0.3ex;
 }
-
-#social i:not(.la-at):hover {
+#social i:not(#at):hover {
   transition: 0.3s;
   color: black;
 }
 
-/* a work-around until Font Awesome supports Notion icon */
-#notion_icon {
-  margin: 0.1em 0 0 0.4em;
-  vertical-align: top;
-  width: 27px;
-  height: 27px;
-}
-
-#down {
-  margin-top: 1em;
-}
-
+/* Fading loop animation for down allow */
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
 }
-
 #down i.las {
   font-size: 32px;
   color: white;
-  animation: fadeIn 1s infinite alternate;
+  animation: fadeIn 0.8s infinite alternate;
 }
 
+/* Shrink vertical spaces between sections */
+.section:first-of-type {
+  padding-bottom: 1rem;
+}
+.section:not(:first-of-type):not(:last-of-type) {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.section:last-of-type {
+  padding-top: 1rem;
+}
 
-#main h3 {
+/* Decorate headers per section */
+.section h3 {
   border-bottom: 4px solid lightseagreen;
 }
 
-#main dt {
+#employment small {
   font-weight: 700;
+}
+
+/* Make p closer to h4 in personal histories */
+#education h4, #employment h4 {
+  margin-bottom: 0.25rem;
+}
+
+/* Make dt bolder and colourful */
+.section dt {
+  font-weight: 800;
   color: lightseagreen;
 }
 
-#main dd ul {
+/* Delete the vertical space on top of direct-child ul under dd */
+.section dd > ul {
   margin-top: 0;
-}
-
-#orcid-id-logo {
-  vertical-align: text-top;
-}
-
-footer {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
+  margin-left: 1rem;
 }
