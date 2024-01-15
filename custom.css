@@ -1,22 +1,3 @@
-/* Hide all language-specific elements by default */
-/* [data-lang] {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-} */
-
-/* Show English elements when the html lang attribute is set to 'en' */
-/* html[lang="en"] [data-lang="en"] {
-  display: block;
-  opacity: 1;
-} */
-
-/* Show Japanese elements when the html lang attribute is set to 'ja' */
-/* html[lang="ja"] [data-lang="ja"] {
-  display: block;
-  opacity: 1;
-} */
-
 body {
   font-weight: 500;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI",
