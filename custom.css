@@ -1,3 +1,22 @@
+/* Hide all language-specific elements by default */
+/* [data-lang] {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+} */
+
+/* Show English elements when the html lang attribute is set to 'en' */
+/* html[lang="en"] [data-lang="en"] {
+  display: block;
+  opacity: 1;
+} */
+
+/* Show Japanese elements when the html lang attribute is set to 'ja' */
+/* html[lang="ja"] [data-lang="ja"] {
+  display: block;
+  opacity: 1;
+} */
+
 body {
   font-weight: 500;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI",
@@ -68,6 +87,7 @@ header.hero h2 {
   color: white;
   padding: 0 0.3ex;
 }
+
 #social i:not(#at):hover {
   transition: 0.3s;
   color: black;
@@ -79,6 +99,7 @@ header.hero h2 {
     opacity: 0;
   }
 }
+
 #down i.las {
   font-size: 32px;
   color: white;
@@ -89,10 +110,12 @@ header.hero h2 {
 .section:first-of-type {
   padding-bottom: 1rem;
 }
+
 .section:not(:first-of-type):not(:last-of-type) {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
 .section:last-of-type {
   padding-top: 1rem;
 }
@@ -102,12 +125,23 @@ header.hero h2 {
   border-bottom: 4px solid lightseagreen;
 }
 
+#projects {
+  border: 4px solid transparent;
+  box-sizing: border-box;
+  transition: border-color 100ms ease-in-out;
+}
+
+#projects:hover {
+  border-color: lightseagreen;
+}
+
 #employment small {
   font-weight: 700;
 }
 
 /* Make p closer to h4 in personal histories */
-#education h4, #employment h4 {
+#education h4,
+#employment h4 {
   margin-bottom: 0.25rem;
 }
 
@@ -118,7 +152,7 @@ header.hero h2 {
 }
 
 /* Delete the vertical space on top of direct-child ul under dd */
-.section dd > ul {
+.section dd>ul {
   margin-top: 0;
   margin-left: 1rem;
 }
