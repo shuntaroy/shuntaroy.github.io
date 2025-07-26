@@ -21,11 +21,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
   <link rel="manifest" href="/favicons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <!-- Page metadata -->
   <meta content="Shuntaro Yada - Profile and CV" name="title">
-  <meta content="The profile site of Shuntaro Yada, a Library and Information Science researcher." name="description">
+  <meta content="Shuntaro Yada - Associate Professor at University of Tsukuba specialising in Library and Information Science, Medical Language Processing, and Social Computing. PI of the Knowledge and Language Computing Laboratory (KaLC Lab)." name="description">
   <meta content="Shuntaro Yada, personal portfolio, CV, Library and Information Science, Medical Language Processing, University of Tsukuba" name="keywords">
   <!-- Language alternatives -->
   <link rel="alternate" hreflang="ja" href="https://shuntaroy.com/ja/">
@@ -34,7 +34,7 @@
   <!-- Social Card Information -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Shuntaro Yada - Profile and CV" />
-  <meta property="og:description" content="The profile site of Shuntaro Yada, a Library and Information Science researcher." />
+  <meta property="og:description" content="Shuntaro Yada - Associate Professor at University of Tsukuba specialising in Library and Information Science, Medical Language Processing, and Social Computing. PI of the Knowledge and Language Computing Laboratory (KaLC Lab)." />
   <meta property="og:image" content="https://shuntaroy.com/assets/myartwork_web.png" />
   <meta property="og:url" content="https://shuntaroy.com" />
   <meta property="og:site_name" content="Shuntaro Yada - Profile and CV" />
@@ -46,6 +46,52 @@
   <link href="https://fonts.googleapis.com/css?family=Cardo:700" rel="stylesheet">
   <!-- |Source+Sans+Pro:200,300,400,600,700,900 -->
   <link href="/custom.css" media="screen" rel="stylesheet">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shuntaro Yada",
+    "givenName": "Shuntaro",
+    "familyName": "Yada",
+    "alternateName": "矢田 竣太郎",
+    "jobTitle": "Associate Professor",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "University of Tsukuba",
+      "department": "Institute of Library, Information and Media Science"
+    },
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Knowledge and Language Computing Laboratory (KaLC Lab)",
+      "url": "https://kalc.slis.tsukuba.ac.jp"
+    },
+    "url": "https://shuntaroy.com",
+    "sameAs": [
+      "https://twitter.com/shntryd",
+      "https://github.com/shuntaroy",
+      "https://www.linkedin.com/in/shuntaroy",
+      "https://orcid.org/0000-0002-6209-1054",
+      "https://researchmap.jp/shuntaroy",
+      "https://trios.tsukuba.ac.jp/researcher/0000005005",
+      "https://scholar.google.com/citations?user=rYNwBN8AAAAJ"
+    ],
+    "knowsAbout": [
+      "Library and Information Science",
+      "Medical Informatics",
+      "Natural Language Processing",
+      "Social Computing"
+    ],
+    "alumniOf": [
+      {
+        "@type": "Organization",
+        "name": "The University of Tokyo"
+      }
+    ],
+    "email": "contact@shuntaroy.com",
+    "image": "https://shuntaroy.com/assets/myicon.jpg"
+  }
+  </script>
 </head>
 
 <body class="has-navbar-fixed-top">
@@ -127,7 +173,7 @@
           <li>2025-05-28: I ran an Organized Session, <em><a href="https://confit.atlas.jp/guide/event/jsai2025/session/2L01-05/tables?smZVkFicNY" target="_blank">AI Applications Aiming for Innovation in Medical, Dental, Pharmaceutical, and Life Sciences in the Era of Generative AI</a></em> (in Japanese), at the 39th Annual Conference of the Japanese Society for Artificial Intelligence, 2025</li>
           <li>2025-05-15: I gave a lecture on <em><a href="https://edx.nii.ac.jp/lecture/20250515-05" target="_blank">Trends in Literature Survey Tools Using Generative AI <i class="lab la-youtube"></i></a></em> (in Japanese) at the 88th Educational Institution DX Symposium</li>
           <li>2025-04-01: I have joined the National Diet Library as a Part-time Researcher</li>
-          <li>2025-04-01: I have launched a new lab called <strong><a href="https://kalc.slis.tsukuba.ac.jp">Knowledge and Language Computing Laboratory (KaLC Lab)</a></strong></li>
+          <li>2025-04-01: I have launched a new lab called <strong><a href="https://kalc.slis.tsukuba.ac.jp" target="_blank">Knowledge and Language Computing Laboratory (KaLC Lab)</a></strong></li>
         </ul>
       </div>
     </div>
@@ -153,23 +199,35 @@
           From 2023, we are also developing and operating <a href="https://yamai-taikenki.naist.jp" target="_blank">a book search engine</a> in Japan, which enables searching for books that provide emotional support for people with cancer and other intractable diseases.
         </p>
         <p>
-          Since 2025, as a principal investigator, he has established a new lab called the <strong><a href="https://kalc.slis.tsukuba.ac.jp">Knowledge and Language Computing Laboratory (KaLC Lab)</a></strong> at the University of Tsukuba.
+          Since 2025, as a principal investigator, he has established a new lab called the <strong><a href="https://kalc.slis.tsukuba.ac.jp" target="_blank">Knowledge and Language Computing Laboratory (KaLC Lab)</a></strong> at the University of Tsukuba.
           Building on his expertise in the domains of medicine and education, he aims to expand his research into other knowledge areas such as science, industry, law, economics, culture, and art, leveraging language processing technology as a core methodology.
         </p>
 
-        <div class="has-text-centered mb-4">
-          <a class="button is-link" href="https://researchmap.jp/shuntaroy" target="_blank">
-            <span class="icon mr-1"><i class="las la-external-link-alt"></i></span>
-            Detailed CV with publication lists
-          </a>
-          <p class="is-size-7">by researchmap.jp</p>
+        <div class="columns">
+          <div class="column">
+            <h4>Academic profiles</h4>
+            <div class="buttons">
+              <a class="button is-link" href="https://trios.tsukuba.ac.jp/researcher/0000005005" target="_blank">
+                <span class="icon mr-1"><i class="las la-external-link-alt"></i></span>
+                TRIOS (University of Tsukuba Researcher Information)
+              </a>
+              <a class="button is-link" href="https://scholar.google.com/citations?user=rYNwBN8AAAAJ" target="_blank">
+                <span class="icon mr-1"><i class="las la-external-link-alt"></i></span>
+                Google Scholar
+              </a>
+              <a class="button is-link" href="https://researchmap.jp/shuntaroy" target="_blank">
+                <span class="icon mr-1"><i class="las la-external-link-alt"></i></span>
+                researchmap.jp
+              </a>
+            </div>
+          </div>
         </div>
 
         <div class="columns">
           <div class="column is-6" id="contact">
-            <h5>Details</h5>
+            <h4>Details</h4>
             <ul>
-              <li>Shuntaro Yada</li>
+              <li>Shuntaro Yada, PhD</li>
               <li>Male, born 1991</li>
               <li>
                 <a href="https://orcid.org/0000-0002-6209-1054" target="_blank">
