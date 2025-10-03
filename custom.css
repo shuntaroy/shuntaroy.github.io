@@ -140,3 +140,73 @@ header.hero h2 {
   margin-top: 0;
   margin-left: 1rem;
 }
+
+/* Replace bullet with a CSS-only pin icon for a specific news item */
+#news ul li.is-pinned {
+  list-style: none;
+  position: relative;
+}
+
+#news ul li.is-pinned::before {
+  content: "📌";
+  /* emoji fallback for broad support */
+  position: absolute;
+  /* align inside bullet gutter on older browsers */
+  left: -1.15em;
+  top: 0.1em;
+  margin: 0;
+  color: #f14668;
+  /* Bulma danger color */
+}
+
+/* Alignment fix: prefer ::marker so the pin sits exactly where bullets do */
+@supports selector(li::marker) {
+  #news ul li.is-pinned {
+    list-style: disc;
+    /* keep a marker box so alignment matches siblings */
+    position: static;
+  }
+
+  #news ul li.is-pinned::before {
+    content: none;
+    display: none;
+  }
+
+  #news ul li.is-pinned::marker {
+    content: "📌  ";
+    color: #f14668;
+    /* Bulma danger */
+    font-size: 0.95em;
+    /* visually close to default bullet size */
+  }
+}
+
+/* --- NEW badge marker (aligned like bullet) --- */
+#news ul li.is-new {
+  list-style: disc;
+}
+
+/* Modern browsers */
+@supports selector(li::marker) {
+  #news ul li.is-new::marker {
+    content: "🆕  ";
+    color: #3273dc;
+    /* Bulma primary */
+  }
+}
+
+/* Fallback */
+@supports not selector(li::marker) {
+  #news ul li.is-new {
+    list-style: none;
+    position: relative;
+  }
+
+  #news ul li.is-new::before {
+    content: "🆕";
+    position: absolute;
+    left: -1.15em;
+    top: 0.1em;
+    color: #3273dc;
+  }
+}
