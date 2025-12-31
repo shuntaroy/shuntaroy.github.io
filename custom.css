@@ -66,7 +66,7 @@ header.hero h2 {
 }
 
 /* Social icons */
-#social i.lab {
+#social i.hgi-stroke {
   font-size: 32px;
   color: white;
   padding: 0 0.3ex;
@@ -77,14 +77,14 @@ header.hero h2 {
   color: black;
 }
 
-/* Fading loop animation for down allow */
+/* Fading loop animation for down arrow */
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
 }
 
-#down i.las {
+#down i.hgi-stroke {
   font-size: 32px;
   color: white;
   animation: fadeIn 0.8s infinite alternate;
